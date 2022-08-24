@@ -370,10 +370,20 @@ body .mainbox main .box .right .logo {
   right: 12%;
   top: 10%;
   width: 10%;
+  z-index: 100;
+  overflow: hidden;
 }
 body .mainbox main .box .right .logo .st0 {
   fill: #FF5353;
   stroke: none;
+}
+body .mainbox main .box .right .logo .phone text {
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 1.25rem;
+  fill: #FF5353;
+  mix-blend-mode: multiply;
+  opacity: 0;
+  transform: translateX(0%);
 }
 body .mainbox main .box .right .svgC {
   position: absolute;
@@ -501,11 +511,12 @@ body .mainbox main .box .right .band {
   right: 30%;
   bottom: 15%;
   transition: 0.3s ease;
-  -webkit-animation: bingle 10s 5s linear infinite;
-          animation: bingle 10s 5s linear infinite;
+  -webkit-animation: bingle 10s linear infinite;
+          animation: bingle 10s linear infinite;
 }
 body .mainbox main .box .right .band:hover {
-  transform: scale(1.2);
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 @-webkit-keyframes bingle {
   0% {
@@ -619,12 +630,107 @@ body .mainbox main .box .right .Dia {
   width: 15%;
   top: 12.5%;
   left: 10%;
+  overflow: hidden;
 }
 body .mainbox main .box .right .Dia .dia {
   fill: #FF6C6C;
   mix-blend-mode: multiply;
   transform-origin: 0 0;
   transform: rotate(45deg);
+  -webkit-animation: dia 1s 0.5s ease forwards;
+          animation: dia 1s 0.5s ease forwards;
+}
+body .mainbox main .box .right .Dia .dia:nth-of-type(1) {
+  -webkit-animation: dia1 1s ease forwards;
+          animation: dia1 1s ease forwards;
+}
+@-webkit-keyframes dia1 {
+  0% {
+    transform: rotate(45deg) translate(-90%, 90%);
+  }
+  100% {
+    transform: rotate(45deg) translate(0%, 0%);
+  }
+}
+@keyframes dia1 {
+  0% {
+    transform: rotate(45deg) translate(-90%, 90%);
+  }
+  100% {
+    transform: rotate(45deg) translate(0%, 0%);
+  }
+}
+body .mainbox main .box .right .Dia .dia:nth-of-type(2) {
+  -webkit-animation: dia2 1s 0.1s ease forwards;
+          animation: dia2 1s 0.1s ease forwards;
+}
+@-webkit-keyframes dia2 {
+  0% {
+    transform: rotate(45deg) translate(-90%, 90%);
+  }
+  100% {
+    transform: rotate(45deg) translate(0%, 0%);
+  }
+}
+@keyframes dia2 {
+  0% {
+    transform: rotate(45deg) translate(-90%, 90%);
+  }
+  100% {
+    transform: rotate(45deg) translate(0%, 0%);
+  }
+}
+body .mainbox main .box .right .Dia .dia:nth-of-type(3) {
+  -webkit-animation: dia3 1s 0.2s ease forwards;
+          animation: dia3 1s 0.2s ease forwards;
+}
+@-webkit-keyframes dia3 {
+  0% {
+    transform: rotate(45deg) translate(-90%, 90%);
+  }
+  100% {
+    transform: rotate(45deg) translate(0%, 0%);
+  }
+}
+@keyframes dia3 {
+  0% {
+    transform: rotate(45deg) translate(-90%, 90%);
+  }
+  100% {
+    transform: rotate(45deg) translate(0%, 0%);
+  }
+}
+@-webkit-keyframes dia {
+  0% {
+    transform: rotate(45deg) translate(90%, 90%);
+  }
+  100% {
+    transform: rotate(45deg) translate(0%, 0%);
+  }
+}
+@keyframes dia {
+  0% {
+    transform: rotate(45deg) translate(90%, 90%);
+  }
+  100% {
+    transform: rotate(45deg) translate(0%, 0%);
+  }
+}
+@-webkit-keyframes diaup1 {
+  0% {
+    transform: rotate(45deg) translate(0%, 0%);
+  }
+  100% {
+    transform: rotate(45deg) translate(90%, 90%);
+  }
+}
+@keyframes diaup1 {
+  0% {
+    transform: rotate(45deg) translate(0%, 0%);
+  }
+  100% {
+    transform: rotate(45deg) translate(90%, 90%);
+  }
 }
 body .mainbox main .box .right .rectbox {
   position: absolute;

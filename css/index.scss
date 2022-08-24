@@ -224,8 +224,20 @@ body{
                         position: absolute;
                         right: 12%; top: 10%;
                         width: 10%;
+                        z-index: 100;
+                        overflow: hidden;
                         .st0{
                             @include logoPath();
+                        }
+                        .phone{
+                            text{
+                                font-family: 'LeferiBaseType-RegularA';
+                                font-size: 1.25rem;
+                                fill:#FF5353;
+                                mix-blend-mode: multiply;
+                                opacity: 0;
+                                transform: translateX(0%);
+                            }
                         }
                     }
 
@@ -322,15 +334,16 @@ body{
                         width: 12%;
                         right: 30%; bottom: 15%;
                         transition: .3s ease;
-                        animation: bingle 10s  5s linear infinite;
+                        animation: bingle 10s   linear infinite;
                         &:hover{
-                            transform: scale(1.2);
+                            
+                            animation-play-state: paused;
                         }
                     }
 
                     @keyframes bingle {
                         0%{
-                            transform: rotate(0deg);
+                            transform:rotate(0deg);
                         }
                         100%{
                             transform: rotate(360deg);
@@ -403,13 +416,53 @@ body{
                         position: absolute;
                         width: 15%;
                         top: 12.5%; left: 10%;
+                        overflow: hidden;
                             
                             .dia{
                                 fill:#FF6C6C;
                                 mix-blend-mode: multiply;
                                 transform-origin: 0 0;
                                 transform: rotate(45deg);
+                                animation: dia 1s .5s ease forwards;
+
+                                &:nth-of-type(1){
+                                    animation: dia1 1s ease forwards;
+                                    @keyframes dia1 {
+                                        0%{transform: rotate(45deg) translate(-90%,90%);}
+                                        100%{transform: rotate(45deg) translate(0%,0%);}
+                                    }
+                                }
+                                &:nth-of-type(2){
+                                    animation: dia2 1s .1s ease forwards;
+                                    @keyframes dia2 {
+                                        0%{transform: rotate(45deg) translate(-90%,90%);}
+                                        100%{transform: rotate(45deg) translate(0%,0%);}
+                                    }
+                                }
+                                &:nth-of-type(3){
+                                    animation: dia3 1s .2s ease forwards;
+                                    @keyframes dia3 {
+                                        0%{transform: rotate(45deg) translate(-90%,90%);}
+                                        100%{transform: rotate(45deg) translate(0%,0%);}
+                                    }
+                                }
+
+                                @keyframes dia {
+                                    0%{transform: rotate(45deg) translate(90%,90%);}
+                                    100%{transform: rotate(45deg) translate(0%,0%);}
+                                }
+
+
+                                @keyframes diaup1 {
+                                    0%{transform: rotate(45deg) translate(0%,0%);}
+                                    100%{transform: rotate(45deg) translate(90%,90%);}
+                                }
                         }
+                        
+
+                        
+
+                        
                     }
 
                     .rectbox{

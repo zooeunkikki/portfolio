@@ -1,5 +1,6 @@
 onload = function () {
     draw();
+    click();
 };
 function draw() {
     const canvas = document.getElementById('c1');
@@ -32,3 +33,42 @@ function draw() {
 
 }
 
+function click(){
+    let arrow = document.querySelector('.arrow'),
+        band = document.querySelector('.band'),
+        dia = document.querySelectorAll('.dia');
+    arrow.addEventListener('mouseover',function(){
+        event.target.style="cursor:pointer";
+        arrow.onclick =function(){
+            location.href='./sub_contact.html'; 
+        };
+    })
+
+    band.addEventListener('mouseenter',function(){
+        event.target.style="cursor:pointer";
+        band.onclick = function(){
+            location.href='./sub_work.html'; 
+        };
+    })
+
+    band.addEventListener('mouseout',function(){
+        event.target.style="cursor:pointer ";
+        band.onclick = function(){
+            location.href='./sub_work.html'; 
+        };
+    })
+
+    dia.forEach(function(v,k){
+        v.addEventListener('mouseover',function(){
+            event.target.style="animation: diaup1 1s ease forwards;";
+
+        })
+
+        v.addEventListener('mouseout',function(){
+            event.target.style="animation: dia 1s ease forwards;";
+            
+        })
+
+    })
+    
+}
