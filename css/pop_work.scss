@@ -1,0 +1,344 @@
+@import"_common";
+
+
+@mixin h3Line {
+    content: '';
+    display: block;
+    width: 140%;
+    height: 1.5vh;
+    background-color: #FFABAB;
+    mix-blend-mode: multiply;
+    transform: translate(-10%,-150%);
+}
+
+@mixin h3 {
+    margin: 0;
+    display: inline-block;
+    font-family: 'LeferiBaseType-RegularA';
+    font-size: 2rem;
+}
+
+@mixin vr {
+    position: sticky;
+    right: -5%; top: 20%;
+    font-family: 'LeferiPoint-WhiteA';
+    font-size: 8rem;
+    font-weight: 700;
+    color: #ff7c7c6c;
+    writing-mode: vertical-lr;
+    transform: scale(-1);
+    z-index: -20;
+    margin: 0;
+    
+}
+
+
+
+body{overflow-y: auto;}
+main{
+    width: $pagrWidth;
+    canvas{
+        @include canvas();
+    }
+
+    .popupbox{
+        width: 80%;
+        margin: 0 auto;
+        .htxt{
+            text-align: center;
+            h2{
+                font-family: 'LeferiPoint-WhiteA';
+                font-size: 6rem;
+                font-weight: 300;
+                color: #FF7C7C;
+            }
+        }
+
+        section{
+            margin: 7% 0;
+        }
+
+        .one{
+            margin-top: 0;
+            position: relative;
+            width: 100%;
+            .vrtxt{
+                @include vr();
+            }
+            .flow{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                .flowL{
+                    width: 50%;
+                    .imgw{
+                        width: 50%;
+                        p{
+                            width: 100%;
+                            display: inline-block;
+                            margin: 0;
+                            padding: 0;
+                            vertical-align: top;
+                            img{
+                                width: 100%;
+                                vertical-align: top;
+                            }
+                        }
+                    }
+
+                    .link{
+                        margin-top: 10%;
+                        width: 50%;
+                        border: 3px solid #000;
+                        background-color: #fff;
+                        
+                        span{
+                            display: block;
+                            border-bottom: 3px solid #000;
+                            width: 100%;
+                            padding: 4% 10%;
+                        }
+                        
+                        .linkT{
+                            padding: 5%;
+                            p{
+                                font-family: 'LeferiBaseType-RegularA';
+                                font-size: 1.5rem;
+                            }
+                        }
+
+                        .linkB{
+                            margin-top: 5%;
+                                padding: 0 5% 2%;
+                                ul{
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    li{
+                                        width: 33%;
+                                        text-align: center;
+                                        a{
+                                            display: inline-block;
+                                            width: 50%;
+                                            height: 4vh;
+                                            background: url('../img/icon/work/folder_P.svg')0%0% / 100% no-repeat;
+                                        }
+                                        p{
+                                            margin: 0;
+                                            font-family: 'LeferiBaseType-RegularA';
+                                            font-size: 1.3rem;
+                                        }
+
+                                        &:nth-of-type(1){
+                                            animation: folder 1s ease forwards;
+                                            @keyframes folder {
+                                            0%{transform: translateY(150%);}
+                                            100%{transform: translateY(0%);}
+                                        }
+                                        }
+                                        &:nth-of-type(2){
+                                            animation: folder2 1s .1s ease forwards;
+                                            @keyframes folder2 {
+                                            0%{transform: translateY(150%);}
+                                            100%{transform: translateY(0%);}
+                                        }
+                                        }
+                                        &:nth-of-type(3){
+                                            animation: folder3 1s .2s ease forwards;
+                                            @keyframes folder3 {
+                                            0%{transform: translateY(150%);}
+                                            100%{transform: translateY(0%);}
+                                        }
+                                        }
+                                        
+                                    }
+                                }
+                        }
+                    }
+                }
+
+                .flowR{
+                    width: 50%;
+                    ul{
+                        display: flex;
+                        flex-wrap: wrap;
+                        li{
+                            margin-bottom: 7%;
+                            h3{
+                                @include h3();
+                                &::after{
+                                    @include h3Line();
+                                }
+                            }
+                            p{
+                                font-family: 'LeferiBaseType-RegularA';
+                                font-size: 1.3rem;
+                                white-space: $pre;
+                            }
+
+                            >div{
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-top: 5%;
+                                p{
+                                    margin:0;
+                                    white-space: $pre;
+                                    line-height: 1;
+                                }
+                                span{
+                                    display: block;
+                                    width: 50vh;
+                                    height: 2vh;
+                                    border: 1px solid #000;
+                                    border-radius: 20px;
+                                    &::after{
+                                        content:'' ;
+                                        display: block;
+                                        width: 30vh;
+                                        height: 1.8vh;
+                                        background-color: #FFABAB;
+                                        border-radius: 20px;
+                                        z-index: -10;
+                                        border: transparent;
+                                    }
+                                }
+                            
+                            }
+
+                            .liImg{
+                                display: inline-block;
+                                width: 100%;
+                                vertical-align: top;
+                                margin: 0;
+                                img{
+                                    width: 100%;
+                                    vertical-align: top;
+                                }
+                            }
+                        }
+                    }
+                }
+            }  
+            .diagram{
+                margin-bottom: 7%;
+                h3{
+                    @include h3();
+                    &::after{
+                        @include h3Line();
+                    }
+                }
+                p{
+                    display: inline-block;
+                    margin: 7% 0 0;
+                    width: 90%;
+                    vertical-align: top;
+                    img{
+                        width: 100%;
+                        vertical-align: top;
+                    }
+                }
+            }
+        }
+
+        .two{
+            position: relative;
+            width: 100%;
+            .vrtxt{
+                @include vr();
+            }
+
+            h3{
+                @include h3();
+                &::after{
+                    @include h3Line();
+                }
+            }
+            p{
+                margin: 7% 0;
+                display: inline-block;
+                vertical-align: top;
+                img{
+                    width: 100%;
+                    vertical-align: top;
+                }
+            }
+        }
+
+        .three{
+            h3{
+                @include h3();
+                &::after{
+                    @include h3Line();
+                }
+            }
+            p{
+                margin: 7% 0;
+                display: inline-block;
+                vertical-align: top;
+                img{
+                    width: 100%;
+                    vertical-align: top;
+                }
+            }
+
+            .Dtxt{
+                margin-top: 5%;
+                h4{
+                    margin: 0;
+                    display: inline-block;
+                    font-family: 'LeferiBaseType-RegularA';
+                    font-size: 1.3rem;
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 3.3vh;
+                        border-radius: 50px;
+                        background-color: #FF7C7C;
+                        mix-blend-mode: multiply;
+                        transform: translate(-30%,-130%);
+                    }
+                }
+
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    width: 100%;
+                    li{
+                        width: 18%;
+                        margin-bottom: 5%;
+                        p{
+                            position: relative;
+                            font-family: 'LeferiBaseType-RegularA';
+                            font-size: 1.3rem;
+                            margin: 0;
+                            white-space: $pre;
+                            word-break: keep-all;
+                        }
+                        &:hover{
+                            p{
+                                &::after{
+                                    position: absolute;
+                                    left: -15%; top: -30%;
+                                    content: '';
+                                    display: block;
+                                    width: 30%;
+                                    height: 8vh;
+                                    border-radius: 50px;
+                                    background-color: #FF7C7C;
+                                    mix-blend-mode: multiply;
+                                    // transform: translate(-10%,-20%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

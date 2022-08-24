@@ -258,7 +258,7 @@ body .mainbox main .box .left .leftbtn {
   right: 5%;
   top: 10%;
   width: 40%;
-  height: 80vh;
+  height: 90vh;
 }
 body .mainbox main .box .left .leftbtn .workbtn {
   width: 100%;
@@ -323,6 +323,7 @@ body .mainbox main .box .left .leftbtn .Downbtn p::after {
 body .mainbox main .box .right {
   position: relative;
   width: 80%;
+  background: url("../img/imsi/bg.svg") 0% 40%/cover;
 }
 body .mainbox main .box .right .logo {
   position: absolute;
@@ -352,15 +353,18 @@ body .mainbox main .box .right .subtxt h2 {
   background-color: #fff;
 }
 body .mainbox main .box .right .Work {
-  border: 1px solid #f00;
+  position: absolute;
+  left: 0;
+  top: 0;
   display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
   width: 100%;
-  height: 100%;
-  padding: 20%;
+  padding: 15vw 0;
 }
 body .mainbox main .box .right .Work .imgwork {
-  width: 50%;
-  border: 1px solid #000;
+  width: 30%;
+  overflow: hidden;
 }
 body .mainbox main .box .right .Work .imgwork p {
   width: 100%;
@@ -368,12 +372,335 @@ body .mainbox main .box .right .Work .imgwork p {
   margin: 0;
   padding: 0;
   vertical-align: top;
+  opacity: 0;
+  -webkit-animation: img 1s ease forwards;
+          animation: img 1s ease forwards;
 }
 body .mainbox main .box .right .Work .imgwork p img {
   width: 100%;
   vertical-align: top;
 }
+@-webkit-keyframes img {
+  0% {
+    transform: translateX(-100%);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes img {
+  0% {
+    transform: translateX(-100%);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
 body .mainbox main .box .right .Work .worktxt {
+  width: 35%;
   border: 3px solid #000;
   background-color: #fff;
+  overflow: hidden;
+}
+body .mainbox main .box .right .Work .worktxt span {
+  display: block;
+  border-bottom: 3px solid #000;
+  width: 100%;
+  padding: 4% 10%;
+}
+body .mainbox main .box .right .Work .worktxt .wTxt {
+  padding: 5%;
+  overflow: hidden;
+}
+body .mainbox main .box .right .Work .worktxt .wTxt .hh {
+  overflow: hidden;
+}
+body .mainbox main .box .right .Work .worktxt .wTxt .hh > h2 {
+  margin-top: 0;
+  font-family: "LeferiBaseType-BoldA";
+  font-size: 2.5rem;
+  -webkit-animation: h2 1s ease forwards;
+          animation: h2 1s ease forwards;
+  transform: translateY(150%);
+}
+@-webkit-keyframes h2 {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes h2 {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+body .mainbox main .box .right .Work .worktxt .wTxt .tag {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 7%;
+  overflow: hidden;
+}
+body .mainbox main .box .right .Work .worktxt .wTxt .tag p {
+  margin: 0;
+  border: 1px solid #000;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 1% 3%;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 1.3rem;
+  transform: translateY(100%);
+}
+body .mainbox main .box .right .Work .worktxt .wTxt .tag p:nth-of-type(1) {
+  -webkit-animation: p 1s ease forwards;
+          animation: p 1s ease forwards;
+}
+@-webkit-keyframes p {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes p {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+body .mainbox main .box .right .Work .worktxt .wTxt .tag p:nth-of-type(2) {
+  -webkit-animation: p2 1s 0.1s ease forwards;
+          animation: p2 1s 0.1s ease forwards;
+}
+@-webkit-keyframes p2 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes p2 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+body .mainbox main .box .right .Work .worktxt .wTxt .tag p:nth-of-type(3) {
+  -webkit-animation: p3 1s 0.2s ease forwards;
+          animation: p3 1s 0.2s ease forwards;
+}
+@-webkit-keyframes p3 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes p3 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+body .mainbox main .box .right .Work .worktxt .wTxt .tag p:nth-of-type(4) {
+  -webkit-animation: p4 1s 0.3s ease forwards;
+          animation: p4 1s 0.3s ease forwards;
+}
+@-webkit-keyframes p4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes p4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+body .mainbox main .box .right .Work .worktxt .wTxt .p1 {
+  overflow: hidden;
+}
+body .mainbox main .box .right .Work .worktxt .wTxt .p1 p {
+  -webkit-animation: ptag 1s ease forwards;
+          animation: ptag 1s ease forwards;
+}
+@-webkit-keyframes ptag {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes ptag {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+body .mainbox main .box .right .Work .worktxt .wTxt .p2 {
+  overflow: hidden;
+}
+body .mainbox main .box .right .Work .worktxt .wTxt .p2 p {
+  -webkit-animation: ptag2 1s 0.1s ease forwards;
+          animation: ptag2 1s 0.1s ease forwards;
+}
+@-webkit-keyframes ptag2 {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes ptag2 {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+body .mainbox main .box .right .Work .worktxt .wTxt p {
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 1.3rem;
+  line-height: 2;
+  white-space: pre-line;
+  word-break: keep-all;
+  transform: translateY(150%);
+  margin: 0;
+}
+body .mainbox main .box .right .Work .worktxt .wBtn {
+  margin-top: 5%;
+  padding: 0 5% 2%;
+}
+body .mainbox main .box .right .Work .worktxt .wBtn ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+body .mainbox main .box .right .Work .worktxt .wBtn ul li {
+  width: 33%;
+  text-align: center;
+}
+body .mainbox main .box .right .Work .worktxt .wBtn ul li a {
+  display: inline-block;
+  width: 40%;
+  height: 6vh;
+  background: url("../img/icon/work/folder_P.svg") 0% 0%/100% no-repeat;
+}
+body .mainbox main .box .right .Work .worktxt .wBtn ul li p {
+  margin: 0;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 1.3rem;
+}
+body .mainbox main .box .right .Work .worktxt .wBtn ul li:nth-of-type(1) {
+  -webkit-animation: folder 1s ease forwards;
+          animation: folder 1s ease forwards;
+}
+@-webkit-keyframes folder {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes folder {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+body .mainbox main .box .right .Work .worktxt .wBtn ul li:nth-of-type(2) {
+  -webkit-animation: folder2 1s 0.1s ease forwards;
+          animation: folder2 1s 0.1s ease forwards;
+}
+@-webkit-keyframes folder2 {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes folder2 {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+body .mainbox main .box .right .Work .worktxt .wBtn ul li:nth-of-type(3) {
+  -webkit-animation: folder3 1s 0.2s ease forwards;
+          animation: folder3 1s 0.2s ease forwards;
+}
+@-webkit-keyframes folder3 {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes folder3 {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+body .mainbox main .box .right .arrow45 {
+  position: absolute;
+  bottom: 5%;
+  right: 3%;
+  width: 7%;
+  z-index: 20;
+}
+body .mainbox main .box .right .bgtxt {
+  position: absolute;
+  bottom: 0%;
+  left: 25%;
+}
+body .mainbox main .box .right .bgtxt p {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  font-size: 6rem;
+  color: rgba(255, 124, 124, 0.368627451);
+  mix-blend-mode: multiply;
+  margin: 0;
 }/*# sourceMappingURL=sub_work.css.map */
