@@ -1,0 +1,703 @@
+@import url("https://fonts.googleapis.com/css2?family=Emblema+One&family=Plaster&display=swap");
+@font-face {
+  font-family: "LeferiBaseType-RegularA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LeferiBaseType-BoldA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-BoldA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LeferiPoint-WhiteA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LeferiPoint-BlackA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LeferiPoint-BlackObliqueA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackObliqueA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: black;
+}
+
+html,
+body {
+  font-size: 12px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+ul,
+li,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  overflow: hidden;
+}
+body .mainbox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body .mainbox header {
+  z-index: 2;
+  width: 116px;
+  height: 100vh;
+}
+body .mainbox header nav {
+  width: 100%;
+}
+body .mainbox header nav ul {
+  width: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  transform: translate(0, 100vh) rotate(-90deg);
+  transform-origin: 0% 0%;
+}
+body .mainbox header nav ul li {
+  width: 234px;
+  transition: 0.3s ease;
+  flex-shrink: 0;
+}
+body .mainbox header nav ul li h2 {
+  margin: 0;
+  padding: 0;
+}
+body .mainbox header nav ul li h2 a {
+  display: block;
+  width: 100%;
+  height: 116px;
+  background: url("../svg/home_color.svg") 0% 0%/100% no-repeat;
+  transition: 0.3s ease;
+}
+body .mainbox header nav ul li:nth-of-type(1) {
+  z-index: 100;
+}
+body .mainbox header nav ul li:nth-of-type(1) h2 a {
+  background-image: url("../svg/home_b.svg");
+}
+body .mainbox header nav ul li:nth-of-type(1).active, body .mainbox header nav ul li:nth-of-type(1):hover {
+  z-index: 100;
+}
+body .mainbox header nav ul li:nth-of-type(1).active h2 a, body .mainbox header nav ul li:nth-of-type(1):hover h2 a {
+  background-image: url("../svg/home_color.svg");
+}
+body .mainbox header nav ul li:nth-of-type(2) {
+  transform: translateX(50px);
+  z-index: 98;
+}
+body .mainbox header nav ul li:nth-of-type(2) h2 a {
+  background-image: url("../svg/about_b.svg");
+}
+body .mainbox header nav ul li:nth-of-type(2):hover, body .mainbox header nav ul li:nth-of-type(2).active {
+  z-index: 100;
+}
+body .mainbox header nav ul li:nth-of-type(2):hover h2 a, body .mainbox header nav ul li:nth-of-type(2).active h2 a {
+  background-image: url("../svg/about_color.svg");
+}
+body .mainbox header nav ul li:nth-of-type(3) {
+  transform: translateX(100px);
+  z-index: 97;
+}
+body .mainbox header nav ul li:nth-of-type(3) h2 a {
+  background-image: url("../svg/work_b.svg");
+}
+body .mainbox header nav ul li:nth-of-type(3):hover, body .mainbox header nav ul li:nth-of-type(3).active {
+  z-index: 100;
+}
+body .mainbox header nav ul li:nth-of-type(3):hover h2 a, body .mainbox header nav ul li:nth-of-type(3).active h2 a {
+  background-image: url("../svg/work_color.svg");
+}
+body .mainbox header nav ul li:nth-of-type(4) {
+  transform: translateX(150px);
+  z-index: 99;
+}
+body .mainbox header nav ul li:nth-of-type(4) h2 a {
+  background-image: url("../svg/contact_b.svg");
+}
+body .mainbox header nav ul li:nth-of-type(4):hover, body .mainbox header nav ul li:nth-of-type(4).active {
+  z-index: 100;
+}
+body .mainbox header nav ul li:nth-of-type(4):hover h2 a, body .mainbox header nav ul li:nth-of-type(4).active h2 a {
+  background-image: url("../svg/contact_color.svg");
+}
+
+section {
+  position: relative;
+  margin: 15% 0;
+  height: auto;
+}
+
+body {
+  overflow-y: auto;
+}
+
+canvas {
+  position: fixed !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -20;
+}
+
+main {
+  width: 100%;
+}
+main .popupbox {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+main .popupbox .prev {
+  position: absolute;
+  left: -7%;
+  top: 0%;
+  width: 7%;
+}
+main .popupbox .prev:hover path, main .popupbox .prev:active path {
+  fill: #FF7C7C;
+}
+main .popupbox .prev:hover path:nth-of-type(1), main .popupbox .prev:active path:nth-of-type(1) {
+  fill: #fff;
+}
+main .popupbox .next {
+  position: absolute;
+  right: -7%;
+  top: 0%;
+  width: 7%;
+}
+main .popupbox .next:hover path, main .popupbox .next:active path {
+  fill: #FF7C7C;
+}
+main .popupbox .next:hover path:nth-of-type(1), main .popupbox .next:active path:nth-of-type(1) {
+  fill: #fff;
+}
+main .popupbox .htxt {
+  text-align: center;
+}
+main .popupbox .htxt h2 {
+  font-family: "LeferiPoint-WhiteA";
+  font-size: 6rem;
+  font-weight: 300;
+  color: #FF7C7C;
+}
+main .popupbox .one {
+  position: relative;
+  margin-top: 0;
+  width: 100%;
+}
+main .popupbox .one .vrtxt {
+  position: -webkit-sticky;
+  position: sticky;
+  right: 0%;
+  top: 50%;
+  font-family: "LeferiPoint-WhiteA";
+  font-size: 8rem;
+  font-weight: 700;
+  color: rgba(255, 124, 124, 0.4235294118);
+  transform: rotate(90deg) translate(100%, -50%);
+  transform-origin: right center;
+  z-index: -20;
+  margin: 0;
+}
+main .popupbox .one .flow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main .popupbox .one .flow .flowL {
+  width: 50%;
+}
+main .popupbox .one .flow .flowL .imgw {
+  width: 70%;
+}
+main .popupbox .one .flow .flowL .imgw p {
+  width: 100%;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+main .popupbox .one .flow .flowL .imgw p img {
+  width: 100%;
+  vertical-align: top;
+}
+main .popupbox .one .flow .flowL .link {
+  margin-top: 10%;
+  width: 70%;
+  border: 3px solid #000;
+  background-color: #fff;
+}
+main .popupbox .one .flow .flowL .link span {
+  display: block;
+  border-bottom: 3px solid #000;
+  width: 100%;
+  padding: 4% 10%;
+}
+main .popupbox .one .flow .flowL .link .linkT {
+  padding: 5%;
+}
+main .popupbox .one .flow .flowL .link .linkT p {
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 1.5rem;
+}
+main .popupbox .one .flow .flowL .link .linkB {
+  margin-top: 5%;
+  padding: 0 5% 2%;
+}
+main .popupbox .one .flow .flowL .link .linkB ul {
+  width: 100%;
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+main .popupbox .one .flow .flowL .link .linkB ul li {
+  width: 33%;
+  text-align: center;
+}
+main .popupbox .one .flow .flowL .link .linkB ul li a {
+  display: inline-block;
+  width: 50%;
+  height: 7vh;
+  background: url("../img/icon/work/folder_P.svg") 0% 0%/100% no-repeat;
+}
+main .popupbox .one .flow .flowL .link .linkB ul li p {
+  margin: 0;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 1.3rem;
+}
+main .popupbox .one .flow .flowL .link .linkB ul li:nth-of-type(1) {
+  -webkit-animation: folder 1s ease forwards;
+          animation: folder 1s ease forwards;
+}
+@-webkit-keyframes folder {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes folder {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+main .popupbox .one .flow .flowL .link .linkB ul li:nth-of-type(2) {
+  -webkit-animation: folder2 1s 0.1s ease forwards;
+          animation: folder2 1s 0.1s ease forwards;
+}
+@-webkit-keyframes folder2 {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes folder2 {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+main .popupbox .one .flow .flowL .link .linkB ul li:nth-of-type(3) {
+  -webkit-animation: folder3 1s 0.2s ease forwards;
+          animation: folder3 1s 0.2s ease forwards;
+}
+@-webkit-keyframes folder3 {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes folder3 {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+main .popupbox .one .flow .flowR {
+  width: 50%;
+}
+main .popupbox .one .flow .flowR ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+main .popupbox .one .flow .flowR ul li {
+  width: 100%;
+  margin-bottom: 7%;
+}
+main .popupbox .one .flow .flowR ul li h3 {
+  margin: 0;
+  display: inline-block;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 2rem;
+}
+main .popupbox .one .flow .flowR ul li h3::after {
+  content: "";
+  display: block;
+  width: 140%;
+  height: 1.5vh;
+  background-color: #FFABAB;
+  mix-blend-mode: multiply;
+  transform: translate(-10%, -150%);
+}
+main .popupbox .one .flow .flowR ul li p {
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 1.3rem;
+  white-space: pre-line;
+}
+main .popupbox .one .flow .flowR ul li > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5%;
+}
+main .popupbox .one .flow .flowR ul li > div p {
+  margin: 0;
+  white-space: pre-line;
+  line-height: 1;
+}
+main .popupbox .one .flow .flowR ul li > div p:nth-of-type(1) {
+  width: 10%;
+}
+main .popupbox .one .flow .flowR ul li > div p:nth-of-type(2) {
+  width: 5%;
+}
+main .popupbox .one .flow .flowR ul li > div span {
+  display: block;
+  width: 80%;
+  height: 2vh;
+  border: 1px solid #000;
+  border-radius: 20px;
+}
+main .popupbox .one .flow .flowR ul li > div span i {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 1.8vh;
+  background-color: #FFABAB;
+  border-radius: 20px;
+  z-index: -10;
+  border: transparent;
+  transition: 1s;
+}
+main .popupbox .one .flow .flowR ul li .liImg {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  margin: 0;
+}
+main .popupbox .one .flow .flowR ul li .liImg img {
+  width: 100%;
+  vertical-align: top;
+}
+main .popupbox .one .diagram {
+  margin: 7% 0 15%;
+}
+main .popupbox .one .diagram h3 {
+  margin: 0;
+  display: inline-block;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 2rem;
+}
+main .popupbox .one .diagram h3::after {
+  content: "";
+  display: block;
+  width: 140%;
+  height: 1.5vh;
+  background-color: #FFABAB;
+  mix-blend-mode: multiply;
+  transform: translate(-10%, -150%);
+}
+main .popupbox .one .diagram p {
+  display: inline-block;
+  margin: 7% 0 0;
+  width: 90%;
+  vertical-align: top;
+}
+main .popupbox .one .diagram p img {
+  width: 100%;
+  vertical-align: top;
+}
+main .popupbox .two {
+  margin: 15% auto;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+main .popupbox .two .vrtxt {
+  position: -webkit-sticky;
+  position: sticky;
+  right: 0%;
+  top: 50%;
+  font-family: "LeferiPoint-WhiteA";
+  font-size: 8rem;
+  font-weight: 700;
+  color: rgba(255, 124, 124, 0.4235294118);
+  transform: rotate(90deg) translate(100%, -50%);
+  transform-origin: right center;
+  z-index: -20;
+  margin: 0;
+}
+main .popupbox .two h3 {
+  margin: 0;
+  display: inline-block;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 2rem;
+}
+main .popupbox .two h3::after {
+  content: "";
+  display: block;
+  width: 140%;
+  height: 1.5vh;
+  background-color: #FFABAB;
+  mix-blend-mode: multiply;
+  transform: translate(-10%, -150%);
+}
+main .popupbox .two p {
+  margin: 7% 0;
+  display: inline-block;
+  vertical-align: top;
+}
+main .popupbox .two p img {
+  width: 100%;
+  vertical-align: top;
+}
+main .popupbox .three {
+  width: 100%;
+}
+main .popupbox .three h3 {
+  margin: 0;
+  display: inline-block;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 2rem;
+}
+main .popupbox .three h3::after {
+  content: "";
+  display: block;
+  width: 140%;
+  height: 1.5vh;
+  background-color: #FFABAB;
+  mix-blend-mode: multiply;
+  transform: translate(-10%, -150%);
+}
+main .popupbox .three p {
+  margin: 7% 0;
+  display: inline-block;
+  vertical-align: top;
+}
+main .popupbox .three p img {
+  width: 100%;
+  vertical-align: top;
+}
+main .popupbox .three .Dtxt {
+  margin: 5%;
+}
+main .popupbox .three .Dtxt h4 {
+  margin: 0;
+  display: inline-block;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 1.3rem;
+}
+main .popupbox .three .Dtxt h4::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3.3vh;
+  border-radius: 50px;
+  background-color: #FF7C7C;
+  mix-blend-mode: multiply;
+  transform: translate(-30%, -130%);
+}
+main .popupbox .three .Dtxt ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+main .popupbox .three .Dtxt ul li {
+  width: 18%;
+  margin-bottom: 5%;
+}
+main .popupbox .three .Dtxt ul li p {
+  position: relative;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 1.3rem;
+  margin: 0;
+  white-space: pre-line;
+  word-break: keep-all;
+}
+main .popupbox .three .Dtxt ul li:hover p::after {
+  position: absolute;
+  left: -15%;
+  top: -30%;
+  content: "";
+  display: block;
+  width: 30%;
+  height: 8vh;
+  border-radius: 50px;
+  background-color: #FF7C7C;
+  mix-blend-mode: multiply;
+}
+main .popupbox .three .Dtxt ul li:nth-of-type(3):hover p::after {
+  position: absolute;
+  left: -15%;
+  top: -15%;
+  content: "";
+  display: block;
+  width: 30%;
+  height: 8vh;
+  border-radius: 50px;
+  background-color: #FF7C7C;
+  mix-blend-mode: multiply;
+}
+main .popupbox .four h3 {
+  margin: 0;
+  display: inline-block;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 2rem;
+}
+main .popupbox .four h3::after {
+  content: "";
+  display: block;
+  width: 140%;
+  height: 1.5vh;
+  background-color: #FFABAB;
+  mix-blend-mode: multiply;
+  transform: translate(-10%, -150%);
+}
+main .popupbox .four p {
+  margin: 7% 0;
+  display: inline-block;
+  vertical-align: top;
+}
+main .popupbox .four p img {
+  width: 100%;
+  vertical-align: top;
+}
+main .popupbox .four .Ftxt {
+  margin: 5%;
+}
+main .popupbox .four .Ftxt h4 {
+  margin: 0;
+  display: inline-block;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 1.3rem;
+}
+main .popupbox .four .Ftxt h4::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3.3vh;
+  border-radius: 50px;
+  background-color: #FF7C7C;
+  mix-blend-mode: multiply;
+  transform: translate(-30%, -130%);
+}
+main .popupbox .four .Ftxt ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+main .popupbox .four .Ftxt ul li {
+  width: 18%;
+  margin-bottom: 5%;
+}
+main .popupbox .four .Ftxt ul li p {
+  position: relative;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 1.3rem;
+  margin: 0;
+  white-space: pre-line;
+  word-break: keep-all;
+}
+main .popupbox .four .Ftxt ul li:hover p::after {
+  position: absolute;
+  left: -15%;
+  top: -30%;
+  content: "";
+  display: block;
+  width: 30%;
+  height: 8vh;
+  border-radius: 50px;
+  background-color: #FF7C7C;
+  mix-blend-mode: multiply;
+}
+main .popupbox .five {
+  width: 100%;
+}
+main .popupbox .five h3 {
+  margin: 0;
+  display: inline-block;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 2rem;
+}
+main .popupbox .five h3::after {
+  content: "";
+  display: block;
+  width: 140%;
+  height: 1.5vh;
+  background-color: #FFABAB;
+  mix-blend-mode: multiply;
+  transform: translate(-10%, -150%);
+}
+main .popupbox .five .Fsvg {
+  margin: 7% auto;
+  width: 80%;
+  background: url("../img/popup/hanmadi.svg") 0% 0%/100% no-repeat;
+  padding: 10%;
+}
+main .popupbox .five .Fsvg p {
+  margin: 0;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 1.3rem;
+  word-break: keep-all;
+}/*# sourceMappingURL=pop_work.css.map */
