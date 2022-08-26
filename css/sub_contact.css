@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Emblema+One&family=Plaster&display=swap");
 @font-face {
   font-family: "LeferiBaseType-RegularA";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff") format("woff");
@@ -176,6 +177,18 @@ body .mainbox main .box .left {
   height: 100vh;
   padding: 5% 2%;
   background-color: #FFA9A9;
+}
+body .mainbox main .box .left .pinkrect {
+  position: absolute;
+  left: 10%;
+  top: 0%;
+  width: 30%;
+}
+body .mainbox main .box .left .whiteLine {
+  position: absolute;
+  left: 40%;
+  top: 0%;
+  width: 30%;
 }
 body .mainbox main .box .right {
   position: relative;

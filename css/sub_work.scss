@@ -81,9 +81,16 @@ body{
                             svg{
                                 width: 70%;
                                 
-                                // btn1
-                                &:nth-of-type(1):hover,
-                                &:nth-of-type(1).active{
+                                #btn1{
+                                    text{
+                                        fill:#fff;
+                                        font-family: 'Emblema One', cursive;
+                                        font-size: 10rem;
+                                    }
+                                }
+
+                                &:hover,
+                                &.active{
                                     #btn1{
                                         circle{
                                             fill:#fff;
@@ -91,9 +98,28 @@ body{
                                         path{
                                             fill:#FF5353;
                                         }
-                                        
+                                        text{
+                                            font-family: 'Emblema One', cursive;
+                                            font-size: 10rem;
+                                            fill:#FF5353;
+                                        }
                                     }
                                 }
+
+
+                                // btn1
+                                // &:nth-of-type(1):hover,
+                                // &:nth-of-type(1).active{
+                                //     #btn1{
+                                //         circle{
+                                //             fill:#fff;
+                                //         }
+                                //         path{
+                                //             fill:#FF5353;
+                                //         }
+                                        
+                                //     }
+                                // }
                                 // btn2
                                 &:nth-of-type(2):hover,
                                 &:nth-of-type(2).active{
