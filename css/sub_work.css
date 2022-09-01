@@ -703,12 +703,25 @@ body .mainbox main .box .right .arrow45 {
   width: 7%;
   z-index: 20;
 }
+body .mainbox main .box .right .arrow45 svg:hover circle, body .mainbox main .box .right .arrow45 svg:active circle {
+  fill: #fff;
+  stroke: #FF7C7C;
+}
+body .mainbox main .box .right .arrow45 svg:hover path, body .mainbox main .box .right .arrow45 svg:active path {
+  fill: #FF7C7C;
+  transform: translate(-10%, -10%);
+}
 body .mainbox main .box .right .bgtxt {
   position: absolute;
   bottom: 0%;
-  left: 25%;
+  left: 50%;
+  transform: translate(-55%, 0%);
+  width: 100%;
 }
 body .mainbox main .box .right .bgtxt p {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
   font-family: "LeferiPoint-WhiteObliqueA";
   font-size: 6rem;
   color: rgba(255, 124, 124, 0.368627451);

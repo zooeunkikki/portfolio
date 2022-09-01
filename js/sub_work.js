@@ -43,11 +43,11 @@ function work(data){
     const elWorkbtn = document.querySelector('.workbtn'),
             elWork = document.querySelector('.Work');
 
-    let workNum='', workContent='', workIdx=0;
+    let workNum='', workContent='', workIdx = localStorage.workNum;
 
     //workNum
     data.forEach((item,k) => {
-        workNum += `<svg viewBox="0 0 157 157">
+        workNum += `<svg data-url="${k+1}"  viewBox="0 0 157 157">
                         <g id="btn1">
                             <circle cx="78.5" cy="78.5" r="78.5" fill="black"/>
                             <text x="30%" y="70%">${k+1}</text>
@@ -113,7 +113,11 @@ function work(data){
             btn.onclick=function(){
                 let url = this.dataset.url;
                 if(key){
-                    window.open("_blank").location.href = url;
+                    if(data[workIdx].type == 'mobile'){
+                        window.open(url,"_blank","width=414,height=896")
+                    }else{
+                        window.open("_blank").location.href = url;
+                    }
                 }else{
                     localStorage.workNum = workIdx;
                     location.href = url ;
@@ -133,11 +137,10 @@ function work(data){
                 elListBtn[workIdx].classList.add('active')
             }
         });
+        elListBtn[workIdx].classList.add('active')
     }
 
     workData(workIdx)
-    // elWorkbtn[0].classList.add('active');
-
 
 
     // workbtn

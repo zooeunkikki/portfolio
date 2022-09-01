@@ -336,7 +336,8 @@ body .mainbox main .box .right::-webkit-scrollbar {
   display: none;
 }
 body .mainbox main .box .right .scroll {
-  z-index: -1;
+  pointer-events: none;
+  z-index: 2;
   position: fixed;
   left: 25%;
   top: 0;
@@ -634,6 +635,7 @@ body .mainbox main .box .right .scroll .aboutme .abme mark {
   }
 }
 body .mainbox main .box .right .scroll .aboutme .grow {
+  pointer-events: fill;
   position: absolute;
   bottom: 5%;
   left: 10%;
@@ -1020,19 +1022,27 @@ body .mainbox main .box .right .scroll .skill .sk h2::after {
 body .mainbox main .box .right .scroll .skill .skillbox {
   position: absolute;
   left: 10%;
-  top: 30%;
+  top: 50%;
+  transform: translateY(-40%);
   width: 30%;
+  height: 30vh;
 }
 body .mainbox main .box .right .scroll .skill .skillbox .skbox {
-  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  z-index: -2;
 }
 body .mainbox main .box .right .scroll .skill .skillbox .skTxt {
-  top: 5%;
-  left: 20%;
   position: absolute;
-  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 body .mainbox main .box .right .scroll .skill .skillbox .skTxt hgroup {
+  pointer-events: fill;
   display: flex;
   flex-direction: column;
 }
@@ -1054,7 +1064,8 @@ body .mainbox main .box .right .scroll .skill .skillbox .skTxt hgroup h3:hover, 
 body .mainbox main .box .right .scroll .skill .canvasC {
   position: absolute;
   right: 10%;
-  top: 30%;
+  top: 50%;
+  transform: translateY(-40%);
   width: 500px;
   height: 500px;
 }
@@ -1089,20 +1100,31 @@ body .mainbox main .box .right .scroll .skill .canvasC .Ctxt p {
 }
 body .mainbox main .box .right .scroll .skill .bigtxt {
   position: absolute;
-  bottom: 0;
-  left: 15%;
-  width: 50%;
-}
-body .mainbox main .box .right .scroll .skill .bigtxt .programO {
-  position: absolute;
+  left: 50%;
   bottom: 0%;
-  left: 33%;
-  width: 13%;
+  transform: translate(-50%, -10%);
+  width: 100%;
 }
-body .mainbox main .box .right .scroll .skill .bigtxt .programO mask path {
+body .mainbox main .box .right .scroll .skill .bigtxt h2 {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-family: "LeferiPoint-WhiteObliqueA";
+  font-size: 15rem;
+  color: #A9B1FF;
+  mix-blend-mode: multiply;
+  line-height: 0.5;
+}
+body .mainbox main .box .right .scroll .skill .bigtxt h2 span .programO {
+  transform: translate(-20%, 10%);
+  width: 100px;
+}
+body .mainbox main .box .right .scroll .skill .bigtxt h2 span .programO mask path {
   fill: #fff;
 }
-body .mainbox main .box .right .scroll .skill .bigtxt .programO .txto path {
+body .mainbox main .box .right .scroll .skill .bigtxt h2 span .programO .txto path {
   fill: transparent;
   stroke: #3D48B7;
   mix-blend-mode: multiply;
@@ -1123,30 +1145,17 @@ body .mainbox main .box .right .scroll .skill .bigtxt .programO .txto path {
     stroke-dashoffset: 0px;
   }
 }
-body .mainbox main .box .right .scroll .skill .bigtxt .programM {
-  position: absolute;
-  bottom: 0%;
-  right: 0%;
-  transform: translateX(100%);
-  width: 20%;
+body .mainbox main .box .right .scroll .skill .bigtxt h2 span .programM {
+  transform: translate(-40%, 10%);
+  width: 130px;
 }
-body .mainbox main .box .right .scroll .skill .bigtxt .programM mask path {
+body .mainbox main .box .right .scroll .skill .bigtxt h2 span .programM mask path {
   fill: #fff;
 }
-body .mainbox main .box .right .scroll .skill .bigtxt .programM .txtm path {
+body .mainbox main .box .right .scroll .skill .bigtxt h2 span .programM .txtm path {
   fill: transparent;
   stroke: #3D48B7;
   mix-blend-mode: multiply;
   stroke-width: 30px;
   stroke-linecap: round;
-}
-body .mainbox main .box .right .scroll .skill .bigtxt h2 {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  font-family: "LeferiPoint-WhiteObliqueA";
-  font-size: 15rem;
-  color: #A9B1FF;
-  mix-blend-mode: multiply;
-  line-height: 0.5;
 }/*# sourceMappingURL=sub_aboutme.css.map */

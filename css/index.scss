@@ -5,11 +5,6 @@ body{
         width: $pagrWidth;
         position: relative;
         canvas{
-            // position: absolute;
-            // left: 0; top: 0;
-            // width: 100%;
-            // height: 100%;
-            // z-index: -20;
             @include canvas();
         }
         main{
@@ -40,7 +35,6 @@ body{
                             fill:#000;
                             font-family: 'LeferiBaseType-RegularA';
                             textPath{
-                                // fill:#f00;
                                 font-size: 2rem;
                                 white-space: $pre;
                                 tspan{
@@ -56,8 +50,13 @@ body{
 
                     .menutxt{
                         position: relative;
+                        width: 100%;
+                        height: 30vh;
                         .txtCircle{
-                            transform: scaleX(-1) scale(1.2);
+                            position: absolute;
+                            left: 50%; top: 50%;
+                            transform: scaleX(-1) scale(1.2) translate(45%,-50%);
+                            width: 285px;
                         }
                         //circle_svg
                         .txtCircle .b path{
@@ -69,118 +68,116 @@ body{
                             stroke-dashoffset: 1500px;
                             animation: circle 2s ease forwards;
                         }
-
+                        .txtCircle mask path{
+                            fill:white;
+                        }
                         @keyframes circle {
                             100%{
                                 stroke-dashoffset: 0px; 
                             }
                         }
-
-                        .three{
-                        position: absolute;
-                        width: 13%;
-                        left: 25%; top: 13%;
-                        // transform: translate(30%,20%);
-                        // width:62.62px; height:85.38px;
-                        }
-
-                        .txtCircle mask path{
-                            fill:white;
-                        }
-
-                        // 3_svg
-                        .three .threetxt path{
-                            fill:transparent;
-                            stroke:#FF5353;
-                            mix-blend-mode: multiply;
-                            stroke-width: 20px;
-                            stroke-linecap: round;
-                            stroke-dasharray: 100px;
-                            stroke-dashoffset: 100px;
-                            animation: three 1s ease forwards;
-                        }
-
-                        .three .threetxt2 path{
-                            fill:transparent;
-                            stroke:#FF5353;
-                            mix-blend-mode: multiply;
-                            stroke-width: 20px;
-                            stroke-linecap: round;
-                            stroke-dasharray: 100px;
-                            stroke-dashoffset: 100px;
-                            animation: three2 1s .5s ease forwards;
-                        }
-
-                        .three mask path{
-                            fill:white;
-                        }
-
-                        @keyframes three{
-                            100%{
-                                stroke-dashoffset: 0px; 
-                            }
-                        }
-
-                        @keyframes three2{
-                            100%{
-                                stroke-dashoffset: 0px; 
-                            }
-                        }
-
-                        // two
-                        .two{
-                            position: absolute;
-                            left: 10%; top: 60%;
-                            width: 13%;
-                        }
-                            .two .twotxt path{
-                                fill:transparent;
-                                stroke:#FF5353;
-                                mix-blend-mode: multiply;
-                                stroke-width: 30px;
-                                stroke-linecap: round;
-                                stroke-dasharray: 100px;
-                                stroke-dashoffset: 100px;
-                                animation: two 1s ease forwards;
-                            }
-
-                            .two .twotxt2 path{
-                                fill:transparent;
-                                stroke:#FF5353;
-                                mix-blend-mode: multiply;
-                                stroke-width: 10px;
-                                stroke-linecap: round;
-                                stroke-dasharray: 100px;
-                                stroke-dashoffset: 100px;
-                                animation: two2 1s .5s ease forwards;
-                            }
-
-                            @keyframes two{
-                                100%{
-                                    stroke-dashoffset: 0px; 
-                                }
-                            }
-
-                            @keyframes two2{
-                                100%{
-                                    stroke-dashoffset: 0px; 
-                                }
-                            }
-
-                            .two mask path{
-                                fill:white;
-                            }
                     
 
-
+                    .htxt{
+                        position: absolute;
+                        left: 50%; top: 50%;
+                        transform: translate(-50%,-50%);
                         h3{
-                            position: absolute;
-                            left: 15%; top: 15%;
                             font-family: 'LeferiBaseType-BoldA';
                             font-size: 3.2rem;
                             white-space: $pre;
                             margin: 0;
                         }
+                        .three{
+                            position: absolute;
+                            left: 12%; top: 0%;
+                            width: 36px;
+                            }
+
+                            // 3_svg
+                            .three .threetxt path{
+                                fill:transparent;
+                                stroke:#FF5353;
+                                mix-blend-mode: multiply;
+                                stroke-width: 20px;
+                                stroke-linecap: round;
+                                stroke-dasharray: 100px;
+                                stroke-dashoffset: 100px;
+                                animation: three 1s ease forwards;
+                            }
+    
+                            .three .threetxt2 path{
+                                fill:transparent;
+                                stroke:#FF5353;
+                                mix-blend-mode: multiply;
+                                stroke-width: 20px;
+                                stroke-linecap: round;
+                                stroke-dasharray: 100px;
+                                stroke-dashoffset: 100px;
+                                animation: three2 1s .5s ease forwards;
+                            }
+    
+                            .three mask path{
+                                fill:white;
+                            }
+    
+                            @keyframes three{
+                                100%{
+                                    stroke-dashoffset: 0px; 
+                                }
+                            }
+    
+                            @keyframes three2{
+                                100%{
+                                    stroke-dashoffset: 0px; 
+                                }
+                            }
+    
+                            // two
+                            .two{
+                                position: absolute;
+                                left: 0%; bottom: 5%;
+                                transform: translate(-30%,0%);
+                                width: 36px;
+                            }
+                                .two .twotxt path{
+                                    fill:transparent;
+                                    stroke:#FF5353;
+                                    mix-blend-mode: multiply;
+                                    stroke-width: 30px;
+                                    stroke-linecap: round;
+                                    stroke-dasharray: 100px;
+                                    stroke-dashoffset: 100px;
+                                    animation: two 1s ease forwards;
+                                }
+    
+                                .two .twotxt2 path{
+                                    fill:transparent;
+                                    stroke:#FF5353;
+                                    mix-blend-mode: multiply;
+                                    stroke-width: 10px;
+                                    stroke-linecap: round;
+                                    stroke-dasharray: 100px;
+                                    stroke-dashoffset: 100px;
+                                    animation: two2 1s .5s ease forwards;
+                                }
+    
+                                @keyframes two{
+                                    100%{
+                                        stroke-dashoffset: 0px; 
+                                    }
+                                }
+    
+                                @keyframes two2{
+                                    100%{
+                                        stroke-dashoffset: 0px; 
+                                    }
+                                }
+    
+                                .two mask path{
+                                    fill:white;
+                                }
+                    }
 
                         
                     }
@@ -228,15 +225,27 @@ body{
                         overflow: hidden;
                         .st0{
                             @include logoPath();
+                        }                        
+                    }
+                    .phone{
+                        position: absolute;
+                        right: 20%; top: 5%;
+                        transform: translate(-20%, 20%);
+                        width: 250px;
+                        z-index: 100;
+                        overflow: hidden;
+                        // border: 1px solid #f00;
+                        text{
+                            transform: translateX(100%);
+                            font-family: 'LeferiBaseType-RegularA';
+                            font-size: 2rem;
+                            fill:#FF5353;
+                            mix-blend-mode: multiply;
+                            transition:  1.5s ease-in-out ;                   
                         }
-                        .phone{
+                        &:hover,&.active{
                             text{
-                                font-family: 'LeferiBaseType-RegularA';
-                                font-size: 1.25rem;
-                                fill:#FF5353;
-                                mix-blend-mode: multiply;
-                                opacity: 0;
-                                transform: translateX(0%);
+                                transform: translateX(10%);
                             }
                         }
                     }

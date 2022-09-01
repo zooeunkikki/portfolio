@@ -175,34 +175,54 @@ canvas {
 main {
   width: 100%;
 }
+main .prev {
+  position: absolute;
+  left: 5%;
+  top: 2vw;
+  width: 7%;
+}
+main .prev:hover path, main .prev:active path {
+  fill: #FF7C7C;
+}
+main .prev:hover path:nth-of-type(1), main .prev:active path:nth-of-type(1) {
+  fill: #fff;
+}
+main .back {
+  position: absolute;
+  left: 5%;
+  top: 10vw;
+  width: 7%;
+}
+main .back:hover circle, main .back:active circle {
+  fill: #fff;
+  stroke: #FF7C7C;
+}
+main .back:hover path, main .back:active path {
+  fill: #FF7C7C;
+}
+main .next {
+  position: absolute;
+  right: 5%;
+  top: 2vw;
+  width: 7%;
+}
+main .next:hover path, main .next:active path {
+  fill: #FF7C7C;
+}
+main .next:hover path:nth-of-type(1), main .next:active path:nth-of-type(1) {
+  fill: #fff;
+}
 main .popupbox {
   position: relative;
   width: 80%;
   margin: 0 auto;
+  opacity: 1;
+  transform: translateY(0%);
+  transition: 0.5s;
 }
-main .popupbox .prev {
-  position: absolute;
-  left: -7%;
-  top: 0%;
-  width: 7%;
-}
-main .popupbox .prev:hover path, main .popupbox .prev:active path {
-  fill: #FF7C7C;
-}
-main .popupbox .prev:hover path:nth-of-type(1), main .popupbox .prev:active path:nth-of-type(1) {
-  fill: #fff;
-}
-main .popupbox .next {
-  position: absolute;
-  right: -7%;
-  top: 0%;
-  width: 7%;
-}
-main .popupbox .next:hover path, main .popupbox .next:active path {
-  fill: #FF7C7C;
-}
-main .popupbox .next:hover path:nth-of-type(1), main .popupbox .next:active path:nth-of-type(1) {
-  fill: #fff;
+main .popupbox.active {
+  opacity: 0;
+  transform: translateY(3%);
 }
 main .popupbox .htxt {
   text-align: center;
@@ -692,11 +712,12 @@ main .popupbox .five h3::after {
 main .popupbox .five .Fsvg {
   margin: 7% auto;
   width: 80%;
-  background: url("../img/popup/hanmadi.svg") 0% 0%/100% no-repeat;
+  background: url("../img/popup/hanmadi.svg") 50% 50%/90% no-repeat;
   padding: 10%;
 }
 main .popupbox .five .Fsvg p {
   margin: 0;
+  text-align: center;
   font-family: "LeferiBaseType-RegularA";
   font-size: 1.3rem;
   word-break: keep-all;

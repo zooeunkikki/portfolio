@@ -46,41 +46,64 @@ canvas{
 }
 main{
     width: $pagrWidth;
-    
+    // position: relative;
+    .prev{
+        position: absolute;
+        left: 5%; top: 2vw;
+        width: 7%;
+        &:hover,
+        &:active{
+            path{
+                &:nth-of-type(1){
+                    fill: #fff;
+                }
+                fill: #FF7C7C;
+            }
+        }
+    }
+
+    .back{
+        position: absolute;
+        left: 5%; top: 10vw;
+        width: 7%;
+        &:hover,
+        &:active{
+            circle{
+                fill: #fff;
+                stroke: #FF7C7C;
+            }
+            path{
+                fill: #FF7C7C;
+            }
+        }
+    }
+
+    .next{
+        position: absolute;
+        right: 5%; top: 2vw;
+        width: 7%;
+        &:hover,
+        &:active{
+            path{
+                &:nth-of-type(1){
+                    fill: #fff;
+                }
+                fill: #FF7C7C;
+            }
+        }
+    }
 
     .popupbox{
         position: relative;
         width: 80%;
         margin: 0 auto;
 
-        .prev{
-            position: absolute;
-            left: -7%; top: 0%;
-            width: 7%;
-            &:hover,
-            &:active{
-                path{
-                    &:nth-of-type(1){
-                        fill: #fff;
-                    }
-                    fill: #FF7C7C;
-                }
-            }
-        }
-
-        .next{
-            position: absolute;
-            right: -7%; top: 0%;
-            width: 7%;
-            &:hover,
-            &:active{
-                path{
-                    &:nth-of-type(1){
-                        fill: #fff;
-                    }
-                    fill: #FF7C7C;
-                }
-            }
+        opacity: 1;
+        transform: translateY(0%);
+        transition: 0.5s ;
+        &.active{
+            opacity: 0;
+            transform: translateY(3%);
         }
 
         .htxt{
@@ -495,10 +518,11 @@ main{
             .Fsvg{
                 margin: 7% auto;
                 width: 80%;
-                background: url('../img/popup/hanmadi.svg')0% 0% / 100% no-repeat;
+                background: url('../img/popup/hanmadi.svg')50% 50% / 90% no-repeat;
                 padding: 10%;
                 p{
                     margin: 0;
+                    text-align: center;
                     font-family: 'LeferiBaseType-RegularA';
                     font-size: 1.3rem;
                     word-break: keep-all;

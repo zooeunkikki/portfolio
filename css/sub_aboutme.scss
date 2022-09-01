@@ -21,6 +21,7 @@ body{
                     padding: 5% 2%;
                     background-color: #FFA9A9;
 
+                        
                         .path{
                             position: absolute;
                             left: 10%; top: 0;
@@ -147,7 +148,8 @@ body{
                     overflow-y:scroll;
                     &::-webkit-scrollbar{display:none}
                     .scroll{
-                        z-index:-1;
+                        pointer-events: none;
+                        z-index:2;
                         position: fixed;
                         left: 25%; top: 0;
                         width: calc(100% - (20% + 99px));
@@ -363,6 +365,7 @@ body{
                                 }
                             }
                             .grow{
+                                pointer-events: fill;
                                 position: absolute;
                                 bottom: 5%; left: 10%;
                                 width: 50%;
@@ -721,20 +724,27 @@ body{
                                 }
                         
                             }
-
+                            
                             .skillbox{
                                 position: absolute;
-                                left: 10%; top:30%;
+                                left: 10%; top:50%;
+                                transform: translateY(-40%);
                                 width: 30%;
+                                height: 30vh;
                                 .skbox{
-                                    width:90%;
+                                    position: absolute;
+                                    top: 50%; left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    width:350px;
+                                    z-index: -2;
                                 }
 
                                 .skTxt{
-                                    top: 5%; left: 20%;
                                     position: absolute;
-                                    width: 50%;
+                                    top: 50%; left: 50%;
+                                    transform: translate(-50%,-50%);
                                     hgroup{
+                                        pointer-events: fill;
                                         display: flex;
                                         flex-direction: column;
                                         h3{
@@ -760,7 +770,8 @@ body{
 
                             .canvasC{
                                 position: absolute;
-                                right: 10%; top:30%;
+                                right: 10%; top:50%;
+                                transform: translateY(-40%);
                                 width: 500px; height: 500px;
                                 #C2{
                                     // border: 1px solid #f00;
@@ -801,57 +812,14 @@ body{
 
                             .bigtxt{
                                 position: absolute;
-                                bottom: 0; left: 15%;
-                                width: 50%;
-                                .programO{
-                                    position:absolute;
-                                    bottom: 0%; left: 33%;
-                                    width: 13%;
-
-                                    mask path{
-                                        fill:#fff;
-                                    }
-                                    
-                                    .txto path{
-                                        fill:transparent;
-                                        stroke:#3D48B7;
-                                        mix-blend-mode: multiply;
-                                        stroke-width: 30px;
-                                        stroke-linecap: round;
-                                        stroke-dasharray: 300px;
-                                        stroke-dashoffset: 300px;
-                                        animation: o 1s ease forwards;
-                                    }                                    
-
-                                    @keyframes o {
-                                        100%{
-                                            stroke-dashoffset: 0px;
-                                        }
-                                    }
-
-                                }
-
-                                .programM{
-                                    position:absolute;
-                                    bottom: 0%; right: 0%;
-                                    transform: translateX(100%);
-                                    width: 20%;
-                                    mask path{
-                                        fill:#fff;
-                                    }
-
-                                    .txtm path{
-                                        fill:transparent;
-                                        stroke:#3D48B7;
-                                        mix-blend-mode: multiply;
-                                        stroke-width: 30px;
-                                        stroke-linecap: round;
-                                    }
-                                }
-
-
+                                left: 50%; bottom: 0%;
+                                transform: translate(-50%,-10%);
+                                width: 100%;
+                                
                                 h2{
+                                    width: 100%;
                                     display: inline-block;
+                                    text-align: center;
                                     padding: 0;
                                     margin: 0;
                                     font-family: 'LeferiPoint-WhiteObliqueA';
@@ -859,6 +827,51 @@ body{
                                     color:#A9B1FF;
                                     mix-blend-mode: multiply;
                                     line-height: 0.5;
+                                    span{
+                                        .programO{
+                                            transform: translate(-20%,10%);
+                                            width: 100px;
+        
+                                            mask path{
+                                                fill:#fff;
+                                            }
+                                            
+                                            .txto path{
+                                                fill:transparent;
+                                                stroke:#3D48B7;
+                                                mix-blend-mode: multiply;
+                                                stroke-width: 30px;
+                                                stroke-linecap: round;
+                                                stroke-dasharray: 300px;
+                                                stroke-dashoffset: 300px;
+                                                animation: o 1s ease forwards;
+                                            }                                    
+        
+                                            @keyframes o {
+                                                100%{
+                                                    stroke-dashoffset: 0px;
+                                                }
+                                            }
+        
+                                        }
+        
+                                        .programM{
+                                            transform: translate(-40%,10%);
+                                            width: 130px;
+                                            mask path{
+                                                fill:#fff;
+                                            }
+        
+                                            .txtm path{
+                                                fill:transparent;
+                                                stroke:#3D48B7;
+                                                mix-blend-mode: multiply;
+                                                stroke-width: 30px;
+                                                stroke-linecap: round;
+                                            }
+                                        }
+        
+                                    }
                             }
                                 
                                 
