@@ -1,5 +1,6 @@
 onload = function () {
     draw();
+    down();
 };
 function draw() {
     const canvas = document.getElementById('c1');
@@ -30,6 +31,14 @@ function draw() {
     }
     ctx.stroke();
 
+}
+function down() {
+    const downBtn = document.querySelector('.Downbtn');
+
+    downBtn.onclick =function(){
+        let url = this.dataset.url;
+        window.open("_blank").location.href = url;
+    }
 }
 
 
