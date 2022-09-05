@@ -869,7 +869,9 @@ body{
                                                 stroke-linecap: round;
                                                 stroke-dasharray: 300px;
                                                 stroke-dashoffset: 300px;
-                                                animation: o 1s ease forwards;
+                                                &.active{
+                                                    animation: o 1.5s .5s ease forwards;
+                                                }
                                             }                                    
         
                                             @keyframes o {
@@ -893,6 +895,16 @@ body{
                                                 mix-blend-mode: multiply;
                                                 stroke-width: 30px;
                                                 stroke-linecap: round;
+                                                stroke-dasharray: 400px;
+                                                stroke-dashoffset: 400px;
+                                                &.active{
+                                                    animation: m 1.5s .5s ease forwards;
+                                                }
+                                            }
+                                            @keyframes m {
+                                                100%{
+                                                    stroke-dashoffset: 0px;
+                                                }
                                             }
                                         }
         

@@ -12,9 +12,9 @@ function draw() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     
-    console.log(
-        canvas.height
-    );
+    // console.log(
+    //     canvas.height
+    // );
 
     ctx.beginPath();
     ctx.lineWidth = 0.5;
@@ -52,7 +52,7 @@ function c2(){
     ];
 
     function drowFun(n){
-        console.log(n)
+        // console.log(n)
         p.txt = num;
         p.ang = (Math.PI*2)* (num-25) / 100;
 
@@ -119,15 +119,28 @@ function c2(){
         }
 
         elRight.onscroll = ()=>{
+            let o = document.querySelector('.txto path'),
+                m = document.querySelector('.txtm path');
             event.preventDefault();
             scrollFun();
             
             clearTimeout(inter);
             inter = setTimeout(()=>{
                 if(scrollState.state){
-                    if(sIdx < 2) sIdx++;
-                }else{
+                    if(sIdx < 2)sIdx++;                    
+                }
+                else{
                     if(sIdx > 0 ) sIdx--;
+                }       
+                
+                //skill 필기체
+                if(sIdx==2){
+                    console.log('aaa')                    
+                    o.classList.add('active');
+                    m.classList.add('active');
+                }else{
+                    o.classList.remove('active');
+                    m.classList.remove('active');
                 }
                 elScroll.style = `transform:translateY(-${aboutOffset * sIdx}px)`;
                 elRemote.forEach((j)=>{ j.classList.remove('active'); });
@@ -137,16 +150,14 @@ function c2(){
 
         elRemote.forEach((v,k)=>{
             v.onclick = ()=>{
-                sIdx = k;
-                elScroll.style = `transform:translateY(-${aboutOffset * sIdx}px)`;
-                elRemote.forEach((j)=>{ j.classList.remove('active'); });
-                elRemote[k].classList.add('active');
+                if(k!=3){
+                    sIdx = k;
+                    elScroll.style = `transform:translateY(-${aboutOffset * sIdx}px)`;
+                    elRemote.forEach((j)=>{ j.classList.remove('active'); });
+                    elRemote[k].classList.add('active');
+                }
             }
             elRemote[0].classList.add('active');
         });
 
-    
-
-
-    
 }

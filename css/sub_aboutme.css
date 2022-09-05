@@ -1190,8 +1190,10 @@ body .mainbox main .box .right .scroll .skill .bigtxt h2 span .programO .txto pa
   stroke-linecap: round;
   stroke-dasharray: 300px;
   stroke-dashoffset: 300px;
-  -webkit-animation: o 1s ease forwards;
-          animation: o 1s ease forwards;
+}
+body .mainbox main .box .right .scroll .skill .bigtxt h2 span .programO .txto path.active {
+  -webkit-animation: o 1.5s 0.5s ease forwards;
+          animation: o 1.5s 0.5s ease forwards;
 }
 @-webkit-keyframes o {
   100% {
@@ -1216,4 +1218,20 @@ body .mainbox main .box .right .scroll .skill .bigtxt h2 span .programM .txtm pa
   mix-blend-mode: multiply;
   stroke-width: 30px;
   stroke-linecap: round;
+  stroke-dasharray: 400px;
+  stroke-dashoffset: 400px;
+}
+body .mainbox main .box .right .scroll .skill .bigtxt h2 span .programM .txtm path.active {
+  -webkit-animation: m 1.5s 0.5s ease forwards;
+          animation: m 1.5s 0.5s ease forwards;
+}
+@-webkit-keyframes m {
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes m {
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }/*# sourceMappingURL=sub_aboutme.css.map */
