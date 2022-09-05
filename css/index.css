@@ -207,9 +207,15 @@ body .mainbox main .box .left .txtsvg text textPath tspan {
 }
 body .mainbox main .box .left .menutxt {
   position: relative;
+  width: 100%;
+  height: 30vh;
 }
 body .mainbox main .box .left .menutxt .txtCircle {
-  transform: scaleX(-1) scale(1.2);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: scaleX(-1) scale(1.2) translate(45%, -50%);
+  width: 285px;
 }
 body .mainbox main .box .left .menutxt .txtCircle .b path {
   fill: transparent;
@@ -221,6 +227,9 @@ body .mainbox main .box .left .menutxt .txtCircle .b path {
   -webkit-animation: circle 2s ease forwards;
           animation: circle 2s ease forwards;
 }
+body .mainbox main .box .left .menutxt .txtCircle mask path {
+  fill: white;
+}
 @-webkit-keyframes circle {
   100% {
     stroke-dashoffset: 0px;
@@ -231,16 +240,25 @@ body .mainbox main .box .left .menutxt .txtCircle .b path {
     stroke-dashoffset: 0px;
   }
 }
-body .mainbox main .box .left .menutxt .three {
+body .mainbox main .box .left .menutxt .htxt {
   position: absolute;
-  width: 13%;
-  left: 25%;
-  top: 13%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-body .mainbox main .box .left .menutxt .txtCircle mask path {
-  fill: white;
+body .mainbox main .box .left .menutxt .htxt h3 {
+  font-family: "LeferiBaseType-BoldA";
+  font-size: 3.2rem;
+  white-space: pre-line;
+  margin: 0;
 }
-body .mainbox main .box .left .menutxt .three .threetxt path {
+body .mainbox main .box .left .menutxt .htxt .three {
+  position: absolute;
+  left: 12%;
+  top: 0%;
+  width: 36px;
+}
+body .mainbox main .box .left .menutxt .htxt .three .threetxt path {
   fill: transparent;
   stroke: #FF5353;
   mix-blend-mode: multiply;
@@ -251,7 +269,7 @@ body .mainbox main .box .left .menutxt .three .threetxt path {
   -webkit-animation: three 1s ease forwards;
           animation: three 1s ease forwards;
 }
-body .mainbox main .box .left .menutxt .three .threetxt2 path {
+body .mainbox main .box .left .menutxt .htxt .three .threetxt2 path {
   fill: transparent;
   stroke: #FF5353;
   mix-blend-mode: multiply;
@@ -262,7 +280,7 @@ body .mainbox main .box .left .menutxt .three .threetxt2 path {
   -webkit-animation: three2 1s 0.5s ease forwards;
           animation: three2 1s 0.5s ease forwards;
 }
-body .mainbox main .box .left .menutxt .three mask path {
+body .mainbox main .box .left .menutxt .htxt .three mask path {
   fill: white;
 }
 @-webkit-keyframes three {
@@ -285,13 +303,14 @@ body .mainbox main .box .left .menutxt .three mask path {
     stroke-dashoffset: 0px;
   }
 }
-body .mainbox main .box .left .menutxt .two {
+body .mainbox main .box .left .menutxt .htxt .two {
   position: absolute;
-  left: 10%;
-  top: 60%;
-  width: 13%;
+  left: 0%;
+  bottom: 5%;
+  transform: translate(-30%, 0%);
+  width: 36px;
 }
-body .mainbox main .box .left .menutxt .two .twotxt path {
+body .mainbox main .box .left .menutxt .htxt .two .twotxt path {
   fill: transparent;
   stroke: #FF5353;
   mix-blend-mode: multiply;
@@ -302,7 +321,7 @@ body .mainbox main .box .left .menutxt .two .twotxt path {
   -webkit-animation: two 1s ease forwards;
           animation: two 1s ease forwards;
 }
-body .mainbox main .box .left .menutxt .two .twotxt2 path {
+body .mainbox main .box .left .menutxt .htxt .two .twotxt2 path {
   fill: transparent;
   stroke: #FF5353;
   mix-blend-mode: multiply;
@@ -333,17 +352,8 @@ body .mainbox main .box .left .menutxt .two .twotxt2 path {
     stroke-dashoffset: 0px;
   }
 }
-body .mainbox main .box .left .menutxt .two mask path {
+body .mainbox main .box .left .menutxt .htxt .two mask path {
   fill: white;
-}
-body .mainbox main .box .left .menutxt h3 {
-  position: absolute;
-  left: 15%;
-  top: 15%;
-  font-family: "LeferiBaseType-BoldA";
-  font-size: 3.2rem;
-  white-space: pre-line;
-  margin: 0;
 }
 body .mainbox main .box .left .nametag {
   position: absolute;
@@ -378,13 +388,25 @@ body .mainbox main .box .right .logo .st0 {
   fill: #FF5353;
   stroke: none;
 }
-body .mainbox main .box .right .logo .phone text {
+body .mainbox main .box .right .phone {
+  position: absolute;
+  right: 20%;
+  top: 5%;
+  transform: translate(-20%, 20%);
+  width: 250px;
+  z-index: 100;
+  overflow: hidden;
+}
+body .mainbox main .box .right .phone text {
+  transform: translateX(100%);
   font-family: "LeferiBaseType-RegularA";
-  font-size: 1.25rem;
+  font-size: 2rem;
   fill: #FF5353;
   mix-blend-mode: multiply;
-  opacity: 0;
-  transform: translateX(0%);
+  transition: 1.5s ease-in-out;
+}
+body .mainbox main .box .right .phone:hover text, body .mainbox main .box .right .phone.active text {
+  transform: translateX(10%);
 }
 body .mainbox main .box .right .svgC {
   position: absolute;

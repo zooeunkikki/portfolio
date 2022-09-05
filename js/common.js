@@ -1,4 +1,5 @@
 onload = function () {
+    localStorage.workNum = 0;
     draw();
     click();
 };

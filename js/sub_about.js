@@ -43,12 +43,12 @@ function c2(){
     let size =  {w:canvas.width, h:canvas.height};
     let num = 0, idx=0;
     let skill = [
-        {per:80,txt:'1디자인 시안 및 구조에 따른 마크업 및 움직임 구현이 가능합니다.'},
-        {per:60,txt:'2디자인 시안 및 구조에 따른 마크업 및 움직임 구현이 가능합니다.'},
-        {per:30,txt:'3디자인 시안 및 구조에 따른 마크업 및 움직임 구현이 가능합니다.'},
-        {per:90,txt:'4디자인 시안 및 구조에 따른 마크업 및 움직임 구현이 가능합니다.'},
-        {per:100,txt:'5디자인 시안 및 구조에 따른 마크업 및 움직임 구현이 가능합니다.'},
-        {per:20,txt:'6디자인 시안 및 구조에 따른 마크업 및 움직임 구현이 가능합니다.'}
+        {per:90,txt:'이미지 합성, 웹 이미지 및 인쇄물 제작 가능 및 프로그램 기능 숙지가 되었습니다.'},
+        {per:80,txt:'포스터, 로고, 지도 등 다양한 그래픽 작업에 가능한 기능 숙지가 되었습니다.'},
+        {per:90,txt:'컷 편집 및 유튜브, 틱톡 등 SNS 컨텐츠별 트렌드 파악 및 편집이 가능합니다.'},
+        {per:85,txt:'디자인 시안 및 구조에 따른 마크업 및 움직임 구현이 가능합니다.'},
+        {per:60,txt:'AJAX를 이해하여 JQUERY 기반의 AJAX를 활용하여 OPENAPI, SLIDE, 탭 구현 가능, HTML 함수작동 활용이 가능합니다.'},
+        {per:50,txt:'코드 작성과 수정, 플러그인 활용가능, 유효성 검사 규칙 작성 및 활용 가능, 유효성 검사 규칙 작성 및 활용이 가능합니다.'}
     ];
 
     function drowFun(n){
@@ -119,6 +119,7 @@ function c2(){
         }
 
         elRight.onscroll = ()=>{
+            event.preventDefault();
             scrollFun();
             
             clearTimeout(inter);
@@ -126,7 +127,7 @@ function c2(){
                 if(scrollState.state){
                     if(sIdx < 2) sIdx++;
                 }else{
-                    if(sIdx > 0) sIdx--;
+                    if(sIdx > 0 ) sIdx--;
                 }
                 elScroll.style = `transform:translateY(-${aboutOffset * sIdx}px)`;
                 elRemote.forEach((j)=>{ j.classList.remove('active'); });

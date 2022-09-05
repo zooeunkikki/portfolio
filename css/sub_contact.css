@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Emblema+One&family=Plaster&display=swap");
 @font-face {
   font-family: "LeferiBaseType-RegularA";
@@ -181,14 +182,102 @@ body .mainbox main .box .left {
 body .mainbox main .box .left .pinkrect {
   position: absolute;
   left: 10%;
-  top: 0%;
+  top: 0;
   width: 30%;
+  height: 100%;
+}
+body .mainbox main .box .left .path {
+  position: absolute;
+  left: 10%;
+  top: 0;
+  width: 30%;
+  height: 80%;
+}
+body .mainbox main .box .left .path > p {
+  position: absolute;
+  left: 42%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  -webkit-animation: txt1 10s linear infinite;
+          animation: txt1 10s linear infinite;
+}
+@-webkit-keyframes txt1 {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
+}
+@keyframes txt1 {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
+}
+body .mainbox main .box .left .path span {
+  display: block;
+  white-space: nowrap;
+  color: #000;
+  font-family: "LeferiPoint-BlackA";
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  font-size: 3rem;
+}
+body .mainbox main .box .left .path span b {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  font-size: 3rem;
+}
+body .mainbox main .box .left .path2 {
+  position: absolute;
+  left: 45%;
+  top: 0;
+  width: 20%;
+}
+body .mainbox main .box .left .path2 > p {
+  position: absolute;
+  left: 42%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  -webkit-animation: txt2 80s linear infinite;
+          animation: txt2 80s linear infinite;
+}
+@-webkit-keyframes txt2 {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
+}
+@keyframes txt2 {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
+}
+body .mainbox main .box .left .path2 span {
+  display: block;
+  white-space: nowrap;
+  color: #000;
+  font-family: "LeferiPoint-WhiteObliqueA";
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  font-size: 2rem;
 }
 body .mainbox main .box .left .whiteLine {
   position: absolute;
   left: 40%;
   top: 0%;
   width: 30%;
+  height: 100%;
 }
 body .mainbox main .box .right {
   position: relative;
@@ -204,4 +293,66 @@ body .mainbox main .box .right .logo {
 body .mainbox main .box .right .logo .st0 {
   fill: #FF5353;
   stroke: none;
+}
+body .mainbox main .box .right .contactbox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-60%, -50%);
+  width: 50%;
+  background-color: #fff;
+  border: 3px solid #000;
+}
+body .mainbox main .box .right .contactbox span {
+  display: block;
+  border-bottom: 3px solid #000;
+  width: 100%;
+  padding: 3% 10%;
+  background: url("../img/icon/xbtn.png") 95% 50%/4% no-repeat;
+}
+body .mainbox main .box .right .contactbox span marquee {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "LeferiBaseType-RegularA";
+}
+body .mainbox main .box .right .contactbox .ctxt {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+body .mainbox main .box .right .contactbox .ctxt a {
+  display: block;
+  padding: 4%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "LeferiBaseType-RegularA";
+  border-bottom: 1px solid #000;
+}
+body .mainbox main .box .right .contactbox .ctxt a:nth-of-type(3) {
+  border-bottom: none;
+}
+body .mainbox main .box .right .contactbox .ctxt a::before {
+  content: "+";
+  display: inline-block;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 2rem;
+  margin-right: 10%;
+}
+body .mainbox main .box .right .contactbox .ctxt a::after {
+  content: "+";
+  display: inline-block;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 2rem;
+  margin-left: 10%;
+}
+body .mainbox main .box .right .contactbox .ctxt a:hover {
+  font-family: "LeferiBaseType-BoldA";
+  color: #FF5353;
+}
+body .mainbox main .box .right .contactbox .ctxt a:hover::after {
+  content: "←";
+}
+body .mainbox main .box .right .contactbox .ctxt a:hover::before {
+  content: "→";
 }/*# sourceMappingURL=sub_contact.css.map */
