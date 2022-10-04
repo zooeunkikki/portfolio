@@ -1,0 +1,1215 @@
+@import url("https://fonts.googleapis.com/css2?family=Emblema+One&family=Plaster&display=swap");
+@font-face {
+  font-family: "LeferiBaseType-RegularA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LeferiBaseType-BoldA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-BoldA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LeferiPoint-WhiteA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LeferiPoint-BlackA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LeferiPoint-BlackObliqueA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackObliqueA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LeferiPoint-WhiteObliqueA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: black;
+}
+
+html,
+body {
+  font-size: 12px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+ul,
+li,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  overflow: hidden;
+}
+body .mainbox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body .mainbox header {
+  z-index: 2;
+  width: 116px;
+  height: 100vh;
+}
+body .mainbox header nav {
+  width: 100%;
+}
+body .mainbox header nav ul {
+  width: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  transform: translate(0, 100vh) rotate(-90deg);
+  transform-origin: 0% 0%;
+}
+body .mainbox header nav ul li {
+  width: 234px;
+  transition: 0.3s ease;
+  flex-shrink: 0;
+}
+body .mainbox header nav ul li h2 {
+  margin: 0;
+  padding: 0;
+}
+body .mainbox header nav ul li h2 a {
+  display: block;
+  width: 100%;
+  height: 116px;
+  background: url("../svg/home_color.svg") 0% 0%/100% no-repeat;
+  transition: 0.3s ease;
+}
+body .mainbox header nav ul li:nth-of-type(1) {
+  z-index: 100;
+}
+body .mainbox header nav ul li:nth-of-type(1) h2 a {
+  background-image: url("../svg/home_b.svg");
+}
+body .mainbox header nav ul li:nth-of-type(1).active, body .mainbox header nav ul li:nth-of-type(1):hover {
+  z-index: 100;
+}
+body .mainbox header nav ul li:nth-of-type(1).active h2 a, body .mainbox header nav ul li:nth-of-type(1):hover h2 a {
+  background-image: url("../svg/home_color.svg");
+}
+body .mainbox header nav ul li:nth-of-type(2) {
+  transform: translateX(50px);
+  z-index: 98;
+}
+body .mainbox header nav ul li:nth-of-type(2) h2 a {
+  background-image: url("../svg/about_b.svg");
+}
+body .mainbox header nav ul li:nth-of-type(2):hover, body .mainbox header nav ul li:nth-of-type(2).active {
+  z-index: 100;
+}
+body .mainbox header nav ul li:nth-of-type(2):hover h2 a, body .mainbox header nav ul li:nth-of-type(2).active h2 a {
+  background-image: url("../svg/about_color.svg");
+}
+body .mainbox header nav ul li:nth-of-type(3) {
+  transform: translateX(100px);
+  z-index: 97;
+}
+body .mainbox header nav ul li:nth-of-type(3) h2 a {
+  background-image: url("../svg/work_b.svg");
+}
+body .mainbox header nav ul li:nth-of-type(3):hover, body .mainbox header nav ul li:nth-of-type(3).active {
+  z-index: 100;
+}
+body .mainbox header nav ul li:nth-of-type(3):hover h2 a, body .mainbox header nav ul li:nth-of-type(3).active h2 a {
+  background-image: url("../svg/work_color.svg");
+}
+body .mainbox header nav ul li:nth-of-type(4) {
+  transform: translateX(150px);
+  z-index: 99;
+}
+body .mainbox header nav ul li:nth-of-type(4) h2 a {
+  background-image: url("../svg/contact_b.svg");
+}
+body .mainbox header nav ul li:nth-of-type(4):hover, body .mainbox header nav ul li:nth-of-type(4).active {
+  z-index: 100;
+}
+body .mainbox header nav ul li:nth-of-type(4):hover h2 a, body .mainbox header nav ul li:nth-of-type(4).active h2 a {
+  background-image: url("../svg/contact_color.svg");
+}
+
+body {
+  overflow: hidden;
+}
+body .mainbox {
+  width: 100%;
+  position: relative;
+}
+body .mainbox canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -20;
+}
+body .mainbox main {
+  width: calc(100% - 116px);
+}
+body .mainbox main .box {
+  display: flex;
+  justify-content: space-between;
+}
+body .mainbox main .box .left {
+  position: relative;
+  width: 20%;
+  height: 100vh;
+  padding: 5% 2%;
+  background-color: #FFA9A9;
+}
+body .mainbox main .box .left .path {
+  position: absolute;
+  left: 10%;
+  top: 0;
+  width: 30%;
+  fill: transparent;
+  stroke: #000000;
+  stroke-width: 2;
+}
+body .mainbox main .box .left .path text {
+  fill: #000;
+  font-family: "LeferiPoint-BlackA";
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  font-size: 3rem;
+}
+body .mainbox main .box .left .path text:nth-of-type(1) {
+  -webkit-animation: txt1 10s linear infinite;
+          animation: txt1 10s linear infinite;
+}
+body .mainbox main .box .left .path text:nth-of-type(2) {
+  transform: translateY(-215%);
+  -webkit-animation: txt2 10s linear infinite;
+          animation: txt2 10s linear infinite;
+}
+@-webkit-keyframes txt1 {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes txt1 {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@-webkit-keyframes txt2 {
+  0% {
+    transform: translateY(-215%);
+  }
+  100% {
+    transform: translateY(-115%);
+  }
+}
+@keyframes txt2 {
+  0% {
+    transform: translateY(-215%);
+  }
+  100% {
+    transform: translateY(-115%);
+  }
+}
+body .mainbox main .box .left .path text tspan {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 0.5;
+  font-size: 3rem;
+}
+body .mainbox main .box .left .txtline {
+  position: absolute;
+  left: 10%;
+  top: 0;
+  width: 30%;
+}
+body .mainbox main .box .left .txtline path {
+  fill: #FF5353;
+}
+body .mainbox main .box .left .remote {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  width: 30%;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 2px solid #000;
+}
+body .mainbox main .box .left .remote .Xbox {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  width: 20%;
+  height: 20%;
+  font-size: 0;
+  background: url("../img/icon/xbtn.png") 0% 0%/100% no-repeat;
+}
+body .mainbox main .box .left .remote ul {
+  margin: 50% auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+body .mainbox main .box .left .remote ul li {
+  text-align: center;
+  width: 40%;
+  border: 1px solid #000;
+  margin: 8% 0;
+}
+body .mainbox main .box .left .remote ul li a {
+  text-align: center;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 2rem;
+}
+body .mainbox main .box .left .remote ul li:nth-of-type(1).active {
+  background-color: #D9A9FF;
+}
+body .mainbox main .box .left .remote ul li:nth-of-type(2).active {
+  background-color: #A9EAFF;
+}
+body .mainbox main .box .left .remote ul li:nth-of-type(3).active {
+  background-color: #A9B1FF;
+}
+body .mainbox main .box .left .remote ul li:nth-last-of-type(1) {
+  border: none;
+  padding: 5% 0;
+  position: relative;
+}
+body .mainbox main .box .left .remote ul li:nth-last-of-type(1) .colorbox {
+  display: block;
+  width: 100%;
+  height: 4vh;
+  border: 2px solid #000;
+  background-color: #fff;
+  transform: translate(-15px, 5px);
+}
+body .mainbox main .box .left .remote ul li:nth-last-of-type(1) .bbox {
+  z-index: -20;
+  display: block;
+  width: 100%;
+  height: 4vh;
+  background-color: #000;
+  transform: translate(5px, -15px);
+}
+body .mainbox main .box .left .remote ul li:nth-last-of-type(1)::before {
+  content: "";
+  display: block;
+  width: 100%;
+  margin: 20% 3%;
+  border-top: 3px solid #000;
+}
+body .mainbox main .box .right {
+  position: relative;
+  width: 80%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+body .mainbox main .box .right::-webkit-scrollbar {
+  display: none;
+}
+body .mainbox main .box .right .scroll {
+  pointer-events: none;
+  z-index: 2;
+  position: fixed;
+  left: 25%;
+  top: 0;
+  width: calc(100% - (20% + 99px));
+  transition: 1s;
+}
+body .mainbox main .box .right .scroll section {
+  height: 100vh;
+}
+body .mainbox main .box .right .scroll .aboutme {
+  position: relative;
+}
+body .mainbox main .box .right .scroll .aboutme .logo {
+  position: absolute;
+  right: 12%;
+  top: 10%;
+  width: 10%;
+}
+body .mainbox main .box .right .scroll .aboutme .logo .st0 {
+  fill: #FF5353;
+  stroke: none;
+}
+body .mainbox main .box .right .scroll .aboutme .ab {
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  width: 25%;
+  padding: 0.5% 3%;
+  padding-right: 0;
+  border: 1px solid #000;
+  border-radius: 50px;
+  background-color: #fff;
+}
+body .mainbox main .box .right .scroll .aboutme .ab h2 {
+  margin: 0;
+  font-family: "LeferiPoint-WhiteA";
+  font-size: 2.5rem;
+}
+body .mainbox main .box .right .scroll .aboutme .ab h2::after {
+  content: "1";
+  display: inline-block;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 2.5rem;
+  padding: 0.5% 6%;
+  margin-left: 30%;
+  border-radius: 50px;
+  border: 2px solid #000;
+  background-color: #D9A9FF;
+}
+body .mainbox main .box .right .scroll .aboutme .meme {
+  position: absolute;
+  top: 28%;
+  right: 8%;
+}
+body .mainbox main .box .right .scroll .aboutme .meme h2 {
+  font-family: "LeferiPoint-BlackA";
+  font-size: 5rem;
+  margin: 0;
+}
+body .mainbox main .box .right .scroll .aboutme .meme .six {
+  position: absolute;
+  top: -25%;
+  left: 33%;
+  width: 30%;
+  transform: rotate(60deg);
+  transform-origin: center;
+}
+body .mainbox main .box .right .scroll .aboutme .meme .six g path {
+  fill: transparent;
+  stroke: #D9A9FF;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 200px;
+  stroke-dashoffset: -200px;
+  -webkit-animation: star 3s ease forwards;
+          animation: star 3s ease forwards;
+}
+@-webkit-keyframes star {
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes star {
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+body .mainbox main .box .right .scroll .aboutme .abimg {
+  position: absolute;
+  top: 38%;
+  right: 8%;
+  width: 30%;
+}
+body .mainbox main .box .right .scroll .aboutme .abimg .imgline {
+  fill: none;
+  width: 100%;
+}
+body .mainbox main .box .right .scroll .aboutme .abimg .imgline rect {
+  stroke: #000;
+  stroke-width: 1;
+}
+body .mainbox main .box .right .scroll .aboutme .abimg .imgline text {
+  fill: #D9A9FF;
+  mix-blend-mode: multiply;
+  font-family: "LeferiPoint-BlackA";
+  font-size: 6rem;
+}
+body .mainbox main .box .right .scroll .aboutme .abimg .imgline text:nth-of-type(1) {
+  -webkit-animation: img1 6s linear infinite;
+          animation: img1 6s linear infinite;
+}
+body .mainbox main .box .right .scroll .aboutme .abimg .imgline text:nth-of-type(2) {
+  -webkit-animation: img2 6s linear infinite;
+          animation: img2 6s linear infinite;
+}
+@-webkit-keyframes img1 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-456%);
+  }
+}
+@keyframes img1 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-456%);
+  }
+}
+@-webkit-keyframes img2 {
+  0% {
+    transform: translateX(456%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes img2 {
+  0% {
+    transform: translateX(456%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+body .mainbox main .box .right .scroll .aboutme .abimg .txtAni {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: -10;
+}
+body .mainbox main .box .right .scroll .aboutme .abimg .txtAni p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  -webkit-animation: pro 1s linear infinite alternate;
+          animation: pro 1s linear infinite alternate;
+}
+body .mainbox main .box .right .scroll .aboutme .abimg .txtAni p img {
+  width: 100%;
+  vertical-align: top;
+}
+@-webkit-keyframes pro {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes pro {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+body .mainbox main .box .right .scroll .aboutme .abme {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  width: 50%;
+  height: 40%;
+  overflow: hidden;
+}
+body .mainbox main .box .right .scroll .aboutme .abme h2 {
+  margin: 0;
+  font-family: "LeferiBaseType-RegularA";
+  mix-blend-mode: overlay;
+  white-space: pre-line;
+  font-size: 4rem;
+  overflow: hidden;
+}
+body .mainbox main .box .right .scroll .aboutme .abme h2 b {
+  font-family: "LeferiBaseType-BoldA";
+  font-size: 4.3rem;
+}
+body .mainbox main .box .right .scroll .aboutme .abme h2:nth-of-type(1) {
+  -webkit-animation: h1 2s ease forwards;
+          animation: h1 2s ease forwards;
+}
+@-webkit-keyframes h1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes h1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+body .mainbox main .box .right .scroll .aboutme .abme h2:nth-of-type(2) {
+  -webkit-animation: h2 2s 0.1s ease forwards;
+          animation: h2 2s 0.1s ease forwards;
+  transform: translate(20%, 30%);
+}
+@-webkit-keyframes h2 {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(20%);
+  }
+}
+@keyframes h2 {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(20%);
+  }
+}
+body .mainbox main .box .right .scroll .aboutme .abme h2:nth-of-type(3) {
+  -webkit-animation: h3 2s 0.2s ease forwards;
+          animation: h3 2s 0.2s ease forwards;
+  transform: translate(15%, 120%);
+}
+@-webkit-keyframes h3 {
+  0% {
+    transform: translate(-115%, 120%);
+  }
+  100% {
+    transform: translate(15%, 120%);
+  }
+}
+@keyframes h3 {
+  0% {
+    transform: translate(-115%, 120%);
+  }
+  100% {
+    transform: translate(15%, 120%);
+  }
+}
+body .mainbox main .box .right .scroll .aboutme .abme mark {
+  display: inline-block;
+  width: 0%;
+  height: 2vh;
+  font-size: 0;
+  background-color: #D9A9FF;
+  mix-blend-mode: multiply;
+  -webkit-animation: mark 1s 2s ease forwards;
+          animation: mark 1s 2s ease forwards;
+  opacity: 1;
+}
+@-webkit-keyframes mark {
+  10% {
+    opacity: 1;
+    transform: translate(15%, -180%);
+  }
+  100% {
+    width: 120%;
+    opacity: 1;
+    transform: translate(15%, -180%);
+  }
+}
+@keyframes mark {
+  10% {
+    opacity: 1;
+    transform: translate(15%, -180%);
+  }
+  100% {
+    width: 120%;
+    opacity: 1;
+    transform: translate(15%, -180%);
+  }
+}
+body .mainbox main .box .right .scroll .aboutme .grow {
+  pointer-events: fill;
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .mainbox main .box .right .scroll .aboutme .grow p {
+  transition: 0.5s ease;
+  text-align: left;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  font-family: "LeferiPoint-WhiteA";
+  font-size: 1.8rem;
+  vertical-align: middle;
+}
+body .mainbox main .box .right .scroll .aboutme .grow p::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 37px;
+  height: 37px;
+  margin-right: 10%;
+  transition: 0.5s ease;
+  background: url("../img/icon/line_star.svg") 0% 0%/100% no-repeat;
+}
+body .mainbox main .box .right .scroll .aboutme .grow p:nth-last-of-type(1)::before {
+  background-image: url("../img/icon/flower.svg");
+}
+body .mainbox main .box .right .scroll .aboutme .grow p:hover {
+  transform: scale(1.2);
+}
+body .mainbox main .box .right .scroll .aboutme .grow p:hover::before {
+  transform: rotate(360deg);
+}
+body .mainbox main .box .right .scroll .profil {
+  position: relative;
+}
+body .mainbox main .box .right .scroll .profil .pr {
+  position: absolute;
+  top: 15%;
+  left: 35%;
+  width: 20%;
+  padding: 0.5% 3%;
+  padding-right: 0;
+  border: 1px solid #000;
+  border-radius: 50px;
+  background-color: #fff;
+}
+body .mainbox main .box .right .scroll .profil .pr h2 {
+  margin: 0;
+  font-family: "LeferiPoint-WhiteA";
+  font-size: 2.5rem;
+}
+body .mainbox main .box .right .scroll .profil .pr h2::after {
+  content: "2";
+  display: inline-block;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 2.5rem;
+  padding: 0.5% 6%;
+  margin-left: 30%;
+  border-radius: 50px;
+  border: 2px solid #000;
+  background-color: #A9EAFF;
+}
+body .mainbox main .box .right .scroll .profil .saram {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+body .mainbox main .box .right .scroll .profil .saram .imoge {
+  position: relative;
+  width: 100%;
+}
+body .mainbox main .box .right .scroll .profil .saram .imoge ul {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translate(10%, -50%);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f00;
+}
+body .mainbox main .box .right .scroll .profil .saram .imoge ul li {
+  border: 1px solid #f00;
+  width: 100%;
+  height: 10vh;
+  transition: 0.2s ease;
+  transform: translateY(0%);
+  margin: 5% 0;
+}
+body .mainbox main .box .right .scroll .profil .saram .imoge ul li p {
+  width: 100%;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 12;
+  -webkit-animation: imoge 5s ease infinite;
+          animation: imoge 5s ease infinite;
+}
+body .mainbox main .box .right .scroll .profil .saram .imoge ul li p img {
+  width: 100%;
+  vertical-align: middle;
+}
+@-webkit-keyframes imoge {
+  0%, 10% {
+    transform: translateY(200%);
+  }
+  20%, 30% {
+    transform: translateY(100%);
+  }
+  40%, 50% {
+    transform: translateY(0%);
+  }
+  60%, 70% {
+    transform: translateY(-100%);
+  }
+  80%, 90% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}
+@keyframes imoge {
+  0%, 10% {
+    transform: translateY(200%);
+  }
+  20%, 30% {
+    transform: translateY(100%);
+  }
+  40%, 50% {
+    transform: translateY(0%);
+  }
+  60%, 70% {
+    transform: translateY(-100%);
+  }
+  80%, 90% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}
+body .mainbox main .box .right .scroll .profil .saram .imoge .sa {
+  width: 90%;
+  fill: none;
+}
+body .mainbox main .box .right .scroll .profil .saram .imoge .sa path {
+  fill: #fff;
+  stroke: #000;
+  stroke-width: 3;
+}
+body .mainbox main .box .right .scroll .profil .saram .imoge .sa text {
+  font-family: "LeferiBaseType-BoldA";
+  fill: #000;
+  font-size: 2.3rem;
+}
+body .mainbox main .box .right .scroll .profil .saram .sky {
+  margin-top: 3%;
+  width: 90%;
+  fill: none;
+  z-index: -10;
+}
+body .mainbox main .box .right .scroll .profil .saram .sky path {
+  fill: #A9EAFF;
+  stroke: #000;
+  stroke-width: 3;
+}
+body .mainbox main .box .right .scroll .profil .saram > p {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-55%, 10%);
+  display: inline-block;
+  vertical-align: middle;
+  width: 70%;
+}
+body .mainbox main .box .right .scroll .profil .saram > p img {
+  width: 100%;
+  vertical-align: middle;
+}
+body .mainbox main .box .right .scroll .profil .arrow {
+  position: absolute;
+  right: 0%;
+  top: 15%;
+  width: 50%;
+  height: 75vh;
+}
+body .mainbox main .box .right .scroll .profil .arrow svg {
+  width: 18%;
+}
+body .mainbox main .box .right .scroll .profil .arrow svg:nth-of-type(1) {
+  position: absolute;
+  right: 15%;
+  top: 5%;
+}
+body .mainbox main .box .right .scroll .profil .arrow svg:nth-of-type(2) {
+  position: absolute;
+  right: 0%;
+  top: 3%;
+}
+body .mainbox main .box .right .scroll .profil .arrow svg:nth-of-type(3) {
+  position: absolute;
+  right: -3%;
+  top: 25%;
+}
+body .mainbox main .box .right .scroll .profil .arrow svg:nth-of-type(4) {
+  position: absolute;
+  right: -3%;
+  top: 45%;
+}
+body .mainbox main .box .right .scroll .profil .arrow svg:nth-of-type(5) {
+  position: absolute;
+  right: -3%;
+  top: 65%;
+}
+body .mainbox main .box .right .scroll .profil .arrow svg path {
+  fill: #A9EAFF;
+  mix-blend-mode: multiply;
+}
+body .mainbox main .box .right .scroll .profil .arrow svg #skyAR1 {
+  d: path("M75.8566 97.6991L8.35665 97.6991C4.21451 97.6991 0.85665 94.3412 0.856651 90.1991L0.856654 22.6991C0.856654 18.557 4.21452 15.1991 8.35666 15.1991C12.4988 15.1991 15.8567 18.557 15.8567 22.6991L15.8567 72.0925L87.1991 0.750086L97.8057 11.3567L26.4633 82.6991L75.8567 82.6991C79.9988 82.6991 83.3566 86.057 83.3567 90.1991C83.3567 94.3412 79.9988 97.6991 75.8566 97.6991Z");
+}
+body .mainbox main .box .right .scroll .profil .arrow svg #skyAR2 {
+  d: path("M2.96696 50.4264L50.6967 2.69669C53.6256 -0.232238 58.3743 -0.232238 61.3033 2.69669L109.033 50.4264C111.962 53.3553 111.962 58.1041 109.033 61.033C106.104 63.9619 101.355 63.9619 98.4264 61.033L63.5 26.1066L63.5 127L48.5 127L48.5 26.1066L13.5736 61.033C10.6446 63.9619 5.8959 63.9619 2.96696 61.033C0.0380314 58.1041 0.0380315 53.3553 2.96696 50.4264Z");
+}
+body .mainbox main .box .right .scroll .profil .arrow svg #skyAR3 {
+  d: path("M2.96696 50.4264L50.6967 2.69669C53.6256 -0.232238 58.3743 -0.232238 61.3033 2.69669L109.033 50.4264C111.962 53.3553 111.962 58.1041 109.033 61.033C106.104 63.9619 101.355 63.9619 98.4264 61.033L63.5 26.1066L63.5 127L48.5 127L48.5 26.1066L13.5736 61.033C10.6446 63.9619 5.8959 63.9619 2.96696 61.033C0.0380314 58.1041 0.0380315 53.3553 2.96696 50.4264Z");
+}
+body .mainbox main .box .right .scroll .profil .arrow svg #skyAR4 {
+  d: path("M2.96696 50.4264L50.6967 2.69669C53.6256 -0.232238 58.3743 -0.232238 61.3033 2.69669L109.033 50.4264C111.962 53.3553 111.962 58.1041 109.033 61.033C106.104 63.9619 101.355 63.9619 98.4264 61.033L63.5 26.1066L63.5 127L48.5 127L48.5 26.1066L13.5736 61.033C10.6446 63.9619 5.8959 63.9619 2.96696 61.033C0.0380314 58.1041 0.0380315 53.3553 2.96696 50.4264Z");
+}
+body .mainbox main .box .right .scroll .profil .arrow svg #skystar {
+  d: path("M127.572 32.7129L93.0324 67.2447L142.239 67.2395C143.258 67.2395 144.268 67.4402 145.209 67.8302C146.151 68.2202 147.006 68.7918 147.727 69.5125C148.448 70.2331 149.019 71.0886 149.409 72.0302C149.799 72.9717 150 73.9809 150 75C150 76.0191 149.799 77.0283 149.409 77.9698C149.019 78.9114 148.448 79.7669 147.727 80.4875C147.006 81.2082 146.151 81.7798 145.209 82.1698C144.268 82.5598 143.259 82.7606 142.239 82.7606L93.4913 82.7553L127.572 116.828C129.027 118.284 129.845 120.258 129.845 122.316C129.845 124.374 129.027 126.348 127.572 127.804C126.116 129.259 124.143 130.077 122.084 130.077C120.026 130.077 118.052 129.259 116.597 127.804L82.7554 93.9549L82.7606 142.239C82.7606 144.297 81.9429 146.272 80.4875 147.727C79.0322 149.182 77.0582 150 75 150C72.9418 150 70.9679 149.182 69.5125 147.727C68.0571 146.272 67.2395 144.298 67.2395 142.239L67.2447 93.0323L32.4811 127.803C31.0257 129.259 29.0516 130.077 26.9934 130.077C24.9352 130.077 22.9612 129.259 21.5058 127.804C20.0504 126.348 19.2328 124.374 19.2328 122.316C19.2328 120.258 20.0504 118.284 21.5058 116.829L55.5863 82.7554L7.76088 82.7606C5.70264 82.7606 3.72839 81.9429 2.27302 80.4875C0.817636 79.0322 0 77.0582 0 75C0 72.9418 0.81763 70.9678 2.27301 69.5125C3.7284 68.0571 5.70233 67.2395 7.76055 67.2395L56.0452 67.2446L21.5061 32.7129C20.7854 31.9923 20.2136 31.1365 19.8236 30.195C19.4336 29.2534 19.2328 28.2443 19.2328 27.2252C19.2328 26.206 19.4336 25.1969 19.8236 24.2553C20.2136 23.3138 20.7852 22.4583 21.5058 21.7376C22.2265 21.017 23.082 20.4453 24.0235 20.0553C24.9651 19.6653 25.9742 19.4646 26.9934 19.4646C28.0125 19.4646 29.0217 19.6653 29.9632 20.0553C30.9048 20.4453 31.7603 21.017 32.4809 21.7376L67.2447 56.5089L67.2395 7.76088C67.2395 6.74175 67.4402 5.73228 67.8302 4.79072C68.2202 3.84917 68.7918 2.99365 69.5125 2.27301C70.2331 1.55238 71.0886 0.980741 72.0302 0.590739C72.9717 0.200737 73.9809 0 75 0C76.0191 0 77.0283 0.200737 77.9698 0.590739C78.9114 0.980741 79.7669 1.55238 80.4875 2.27301C81.2082 2.99365 81.7798 3.84917 82.1698 4.79072C82.5598 5.73226 82.7606 6.74141 82.7606 7.76055L82.7554 55.5863L116.597 21.7378C117.317 21.0172 118.173 20.4454 119.114 20.0553C120.056 19.6653 121.065 19.4646 122.084 19.4646C123.103 19.4646 124.113 19.6653 125.054 20.0553C125.996 20.4454 126.851 21.017 127.572 21.7376C128.292 22.4583 128.864 23.3138 129.254 24.2553C129.644 25.1969 129.845 26.206 129.845 27.2252C129.845 28.2443 129.644 29.2534 129.254 30.195C128.864 31.1365 128.292 31.9923 127.572 32.7129ZM79.7546 62.8308L79.7606 7.76055C79.7606 7.13539 79.6374 6.51635 79.3982 5.93877C79.1589 5.36119 78.8083 4.83639 78.3662 4.39434C77.9242 3.95228 77.3994 3.60162 76.8218 3.36238C76.2442 3.12314 75.6252 3 75 3C74.3748 3 73.7558 3.12314 73.1782 3.36238C72.6006 3.60162 72.0758 3.95228 71.6338 4.39434C71.1917 4.83639 70.8411 5.36119 70.6018 5.93877C70.3626 6.51635 70.2395 7.13539 70.2395 7.76055L70.2455 63.7534L30.3596 23.8589C29.9175 23.4169 29.3927 23.0662 28.8152 22.827C28.2376 22.5877 27.6185 22.4646 26.9934 22.4646C26.3682 22.4646 25.7492 22.5877 25.1716 22.827C24.594 23.0662 24.0692 23.4169 23.6272 23.8589C23.1851 24.301 22.8344 24.8258 22.5952 25.4034C22.356 25.981 22.2328 26.6 22.2328 27.2252C22.2328 27.8503 22.356 28.4694 22.5952 29.0469C22.8344 29.6245 23.1851 30.1493 23.6272 30.5914L63.2897 70.2454L7.76055 70.2395C6.49798 70.2395 5.28711 70.741 4.39434 71.6338C3.50156 72.5266 3 73.7374 3 75C3 76.2626 3.50156 77.4734 4.39434 78.3662C5.28711 79.259 6.49798 79.7606 7.76055 79.7606L62.8308 79.7546L23.6272 118.95C22.7344 119.843 22.2328 121.054 22.2328 122.316C22.2328 123.579 22.7344 124.79 23.6272 125.682C24.5199 126.575 25.7308 127.077 26.9934 127.077C28.2559 127.077 29.4668 126.575 30.3596 125.682L70.2455 85.7878L70.2395 142.239C70.2395 143.502 70.741 144.713 71.6338 145.606C72.5266 146.498 73.7374 147 75 147C76.2626 147 77.4734 146.498 78.3662 145.606C79.259 144.713 79.7606 143.502 79.7606 142.239L79.7546 86.7104L118.718 125.682C119.611 126.575 120.822 127.077 122.084 127.077C123.347 127.077 124.558 126.575 125.451 125.682C126.343 124.79 126.845 123.579 126.845 122.316C126.845 121.054 126.343 119.843 125.451 118.95L86.2467 79.7545L142.239 79.7606C142.865 79.7606 143.484 79.6374 144.061 79.3982C144.639 79.1589 145.164 78.8083 145.606 78.3662C146.048 77.9242 146.398 77.3994 146.638 76.8218C146.877 76.2442 147 75.6252 147 75C147 74.3748 146.877 73.7558 146.638 73.1782C146.398 72.6006 146.048 72.0758 145.606 71.6338C145.164 71.1917 144.639 70.8411 144.061 70.6018C143.484 70.3626 142.865 70.2395 142.239 70.2395L85.7879 70.2455L125.451 30.5914C125.893 30.1493 126.243 29.6245 126.482 29.0469C126.722 28.4694 126.845 27.8503 126.845 27.2252C126.845 26.6 126.722 25.981 126.482 25.4034C126.243 24.8258 125.893 24.301 125.451 23.8589C125.008 23.4169 124.484 23.0662 123.906 22.827C123.329 22.5877 122.709 22.4646 122.084 22.4646C121.459 22.4646 120.84 22.5877 120.263 22.827C119.685 23.0662 119.16 23.4169 118.718 23.8589L79.7546 62.8308Z");
+}
+body .mainbox main .box .right .scroll .profil .skyline {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  fill: none;
+  width: 100%;
+}
+body .mainbox main .box .right .scroll .profil .skyline text {
+  font-family: "LeferiPoint-BlackObliqueA";
+  font-size: 2.5rem;
+  fill: #000;
+  transform: translateX(-100%);
+}
+body .mainbox main .box .right .scroll .profil .skyline text tspan {
+  fill: transparent;
+  font-family: "LeferiPoint-BlackObliqueA";
+  font-size: 2.5rem;
+  stroke: #000;
+  stroke-width: 1;
+}
+body .mainbox main .box .right .scroll .profil .skyline text:nth-of-type(1) {
+  -webkit-animation: sky1 7s linear infinite;
+          animation: sky1 7s linear infinite;
+}
+body .mainbox main .box .right .scroll .profil .skyline text:nth-of-type(2) {
+  -webkit-animation: sky2 7s linear infinite;
+          animation: sky2 7s linear infinite;
+}
+@-webkit-keyframes sky1 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-140%);
+  }
+}
+@keyframes sky1 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-140%);
+  }
+}
+@-webkit-keyframes sky2 {
+  0% {
+    transform: translateX(140%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes sky2 {
+  0% {
+    transform: translateX(140%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+body .mainbox main .box .right .scroll .profil .profiltxt {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  background-color: #fff;
+  border: 3px solid #000;
+  width: 40%;
+}
+body .mainbox main .box .right .scroll .profil .profiltxt span {
+  display: block;
+  border-bottom: 3px solid #000;
+  width: 100%;
+  padding: 3% 10%;
+  background: url("../img/icon/xbtn.png") 95% 50%/4% no-repeat;
+}
+body .mainbox main .box .right .scroll .profil .profiltxt .box01 {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 5%;
+}
+body .mainbox main .box .right .scroll .profil .profiltxt p {
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 1.5rem;
+  white-space: pre-line;
+}
+body .mainbox main .box .right .scroll .profil .profiltxt2 {
+  position: absolute;
+  top: 63%;
+  right: 10%;
+  background-color: #fff;
+  border: 3px solid #000;
+  width: 40%;
+}
+body .mainbox main .box .right .scroll .profil .profiltxt2 span {
+  display: block;
+  border-bottom: 3px solid #000;
+  width: 100%;
+  padding: 3% 10%;
+  background: url("../img/icon/xbtn.png") 95% 50%/4% no-repeat;
+}
+body .mainbox main .box .right .scroll .profil .profiltxt2 p {
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 1.5rem;
+  white-space: pre-line;
+}
+body .mainbox main .box .right .scroll .profil .profiltxt2 .box1 {
+  padding: 2% 8%;
+}
+body .mainbox main .box .right .scroll .profil .profiltxt2 .box3 {
+  border-top: 3px solid #000;
+  background-color: #A9EAFF;
+}
+body .mainbox main .box .right .scroll .profil .profiltxt2 .box3 .box4 {
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .mainbox main .box .right .scroll .profil .profiltxt2 .box3 p {
+  margin: 0;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 1.5rem;
+}
+body .mainbox main .box .right .scroll .profil .profiltxt2 .box3 p:nth-of-type(1) {
+  -webkit-animation: left 1s linear infinite;
+          animation: left 1s linear infinite;
+}
+body .mainbox main .box .right .scroll .profil .profiltxt2 .box3 p:nth-of-type(3) {
+  -webkit-animation: right 1s linear infinite alternate;
+          animation: right 1s linear infinite alternate;
+}
+@-webkit-keyframes left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+@keyframes left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+@-webkit-keyframes right {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes right {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+body .mainbox main .box .right .scroll .skill {
+  position: relative;
+}
+body .mainbox main .box .right .scroll .skill .sk {
+  position: absolute;
+  top: 15%;
+  left: 35%;
+  width: 20%;
+  padding: 0.5% 3%;
+  padding-right: 0;
+  border: 1px solid #000;
+  border-radius: 50px;
+  background-color: #fff;
+}
+body .mainbox main .box .right .scroll .skill .sk h2 {
+  margin: 0;
+  font-family: "LeferiPoint-WhiteA";
+  font-size: 2.5rem;
+}
+body .mainbox main .box .right .scroll .skill .sk h2::after {
+  content: "3";
+  display: inline-block;
+  font-family: "LeferiBaseType-RegularA";
+  font-size: 2.5rem;
+  padding: 0.5% 6%;
+  margin-left: 30%;
+  border-radius: 50px;
+  border: 2px solid #000;
+  background-color: #A9B1FF;
+}
+body .mainbox main .box .right .scroll .skill .skillbox {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-40%);
+  width: 30%;
+  height: 30vh;
+}
+body .mainbox main .box .right .scroll .skill .skillbox .skbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  z-index: -2;
+}
+body .mainbox main .box .right .scroll .skill .skillbox .skTxt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .mainbox main .box .right .scroll .skill .skillbox .skTxt hgroup {
+  pointer-events: fill;
+  display: flex;
+  flex-direction: column;
+}
+body .mainbox main .box .right .scroll .skill .skillbox .skTxt hgroup h3 {
+  text-align: center;
+  white-space: pre-line;
+  font-family: "LeferiBaseType-BoldA";
+  font-size: 2rem;
+  padding: 3% 0;
+  margin: 5% 0;
+}
+body .mainbox main .box .right .scroll .skill .skillbox .skTxt hgroup h3:hover, body .mainbox main .box .right .scroll .skill .skillbox .skTxt hgroup h3.active {
+  color: #fff;
+  background: #000;
+  border-radius: 20px;
+  padding: 3% 0;
+  margin: 5% 0;
+}
+body .mainbox main .box .right .scroll .skill .canvasC {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-40%);
+  width: 500px;
+  height: 500px;
+}
+body .mainbox main .box .right .scroll .skill .canvasC .Ctxt {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20%;
+}
+body .mainbox main .box .right .scroll .skill .canvasC .Ctxt h2 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-family: "LeferiBaseType-BoldA";
+  color: #4760E2;
+  font-size: 4.5rem;
+  mix-blend-mode: multiply;
+}
+body .mainbox main .box .right .scroll .skill .canvasC .Ctxt p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  color: #4760E2;
+  font-size: 2rem;
+  mix-blend-mode: multiply;
+  word-break: keep-all;
+}
+body .mainbox main .box .right .scroll .skill .bigtxt {
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, -10%);
+  width: 100%;
+}
+body .mainbox main .box .right .scroll .skill .bigtxt h2 {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-family: "LeferiPoint-WhiteObliqueA";
+  font-size: 15rem;
+  color: #A9B1FF;
+  mix-blend-mode: multiply;
+  line-height: 0.5;
+}
+body .mainbox main .box .right .scroll .skill .bigtxt h2 span .programO {
+  transform: translate(-20%, 10%);
+  width: 100px;
+}
+body .mainbox main .box .right .scroll .skill .bigtxt h2 span .programO mask path {
+  fill: #fff;
+}
+body .mainbox main .box .right .scroll .skill .bigtxt h2 span .programO .txto path {
+  fill: transparent;
+  stroke: #3D48B7;
+  mix-blend-mode: multiply;
+  stroke-width: 30px;
+  stroke-linecap: round;
+  stroke-dasharray: 300px;
+  stroke-dashoffset: 300px;
+  -webkit-animation: o 1s ease forwards;
+          animation: o 1s ease forwards;
+}
+@-webkit-keyframes o {
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes o {
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+body .mainbox main .box .right .scroll .skill .bigtxt h2 span .programM {
+  transform: translate(-40%, 10%);
+  width: 130px;
+}
+body .mainbox main .box .right .scroll .skill .bigtxt h2 span .programM mask path {
+  fill: #fff;
+}
+body .mainbox main .box .right .scroll .skill .bigtxt h2 span .programM .txtm path {
+  fill: transparent;
+  stroke: #3D48B7;
+  mix-blend-mode: multiply;
+  stroke-width: 30px;
+  stroke-linecap: round;
+}/*# sourceMappingURL=sub_aboutme.css.map */
