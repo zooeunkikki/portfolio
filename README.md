@@ -25,7 +25,11 @@
 
 
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
 Site View
 ![4)About _Profile](https://user-images.githubusercontent.com/106298540/193948033-859cc097-d95f-4aa8-901a-650e337c6a2a.jpg)
 ![skill](https://user-images.githubusercontent.com/106298540/193948041-e8b99507-c4d7-44bf-bea0-d3ae34cbfc53.jpg)
@@ -38,7 +42,11 @@ Site View
 
 
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
 문제처리방식:
 각 페이지의 그래픽 요소들이 사용자의 화면 크기에 따라 위치 및 크기가 생각하였 던 오차의 범위를 벗어나는 현상이 나타나 어려움을 겪었습니다. 현재 반응형 작업을 진행하며 이 오차의 범위를 줄이기 위해 노력 중입니다. 또한 컨셉에 치우쳐 무분별
 한 애니메이션 사용과 지나친 그래픽 요소들로 인해 가독성을 잃지 않도록 고민하는 시간을 가진 프로젝트입니다.
