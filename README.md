@@ -11,6 +11,8 @@
 작품 소개: 사람들에게 기억에 남기고, 다시 보고 싶은 작업물처럼 다이어리에 '북마크'하는 것이라는 의미를 표현해 디자인해 보았습니다.
 인덱스 스티커 형식의 스티커 형식의 디자인을 통해서 다른 페이지로 이동 경로 파악 여부 등을 파악할 수 있도록 하며 포트폴리오 또한 하나의 작품으로 보일 수 있도록 표현하였습니다.
 
+
+
 디자인 & 기능 설명:
 
 ![스크린샷 2022-08-25 오전 7 27 46](https://user-images.githubusercontent.com/106298540/193947910-ddaaceef-824f-434e-8afe-3c0da8dd5da0.png)
@@ -26,6 +28,12 @@
 ![skill](https://user-images.githubusercontent.com/106298540/193948041-e8b99507-c4d7-44bf-bea0-d3ae34cbfc53.jpg)
 ![Works](https://user-images.githubusercontent.com/106298540/193948059-034e9de0-942f-422e-8fd3-8b7cc26e6f00.jpg)
 ![Contact](https://user-images.githubusercontent.com/106298540/193948072-a3934a7b-a40b-44a6-8ae0-7934be5e4808.jpg)
+
+
+
+
+
+
 
 
 문제처리방식:
